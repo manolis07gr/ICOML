@@ -1,0 +1,27 @@
+[
+{"feature":" money_raised ",
+"Strongest": 8.41 ,
+"Weakest": 5.19 ,
+"Average": 7.19
+},
+{"feature":" team_size ",
+"Strongest": 1.08 ,
+"Weakest": 0.9 ,
+"Average": 0.83
+},
+{"feature":" accredited_advisors ",
+"Strongest": 0,
+"Weakest": 0,
+"Average": 0.19
+},
+{"feature":" cum_years_experience ",
+"Strongest": 0,
+"Weakest": 1.54 ,
+"Average": 1.41
+},
+{"feature":" age_days ",
+"Strongest": 2.05 ,
+"Weakest": 2.05 ,
+"Average": 2.1
+}
+]

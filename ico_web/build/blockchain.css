@@ -1,0 +1,92 @@
+.blockchain-section {
+    min-height: 256px;
+}
+
+.bg-blockchain-dark {
+     background-color: #504747;
+     color: white;
+}
+ .bg-blockchain-light {
+     background-color: white;
+     color: #504747;
+}
+
+.jumbotron-welcome {
+    background-image: url('./digitalglobecolor.png');
+    background-size: cover;
+    color: white;
+}
+
+.navbar-blockchain {
+    background-color: #504747;
+    border-color: black;
+    border-radius: 0;
+    margin-bottom: 0px;
+}
+.navbar-blockchain .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+.navbar-blockchain .nav-item > .nav-link {
+    color: white;
+}
+.navbar-blockchain .nav-item > .nav-link:hover {
+    background-color: #504747;
+    color: gray;
+}
+.navbar-blockchain .nav-pills > li.active > a {
+    background-color: #504747;
+    color: gray;
+}
+.navbar-blockchain .dropdown-menu {
+    background-color: #504747;
+    border-color: black;
+}
+.navbar-blockchain .dropdown-menu > a {
+    color: white;
+    background-color: #504747;
+}
+.navbar-blockchain .dropdown-menu > a:hover {
+    color: gray;
+    background-color: #504747;
+}
+.navbar-blockchain .dropdown-menu > a:focus {
+    color: gray;
+    background-color: #504747;
+}
+.navbar-blockchain .dropdown-menu > .active > a:focus {
+    color: gray;
+    background-color: #504747;
+}
+.navbar-blockchain > .navbar-toggler {
+    color: white;
+}
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background-color: grey;
+}
+.nav-pills .nav-link.active, .nav-pills .nav-link.active:focus, .nav-pills .nav-link.active:hover,
+.nav-pills .nav-item.open .nav-link,
+.nav-pills .nav-item.open .nav-link:focus,
+.nav-pills .nav-item.open .nav-link:hover {
+    background-color: grey;
+}
+.navbar-blockchain>.navbar-toggler {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.navbar-blockchain .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,
+        <svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'>
+            <path stroke='rgba(255, 255, 255, 0.5)' stroke-width='2'             stroke- linecap='round' stroke-miterlimit='10' d='M4 7h22M4             15h22M423h22'/>
+        </svg>
+    ");
+}
+
+.navbar-blockchain .nav-item > .active {
+     color: gray !important;
+     text-decoration: underline;
+}
+
+footer p {
+    display: inline;
+}

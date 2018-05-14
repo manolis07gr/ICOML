@@ -1,0 +1,24 @@
+{ "name": "ICO Ecosystem",
+ "children": [
+  {
+    "name": "Cluster 1",
+    "children": [
+      {
+        "name": "Internxt",
+        "loc": 220800
+      }
+    ]
+  },
+  {
+    "name": "Cluster 2",
+    "children": [
+      {
+        "name": "Modum.io",
+        "loc": 13350000
+      },
+      {
+        "name": "Trackr",
+        "loc": 288798
+      }]
+  }]
+}

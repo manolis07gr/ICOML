@@ -1,0 +1,4 @@
+-R spec
+--require should
+--require babel-polyfill
+--compilers js:babel-register

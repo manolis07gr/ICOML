@@ -1,0 +1,17 @@
+import sys
+sys.path.append('./modules/symbol_widgets')
+sys.path.append('./modules/timeseries_widgets')
+sys.path.append('./modules/histogram_widgets')
+sys.path.append('./modules/risk_return_widgets')
+sys.path.append('./modules/classes')
+from PySide import QtGui
+import window as win
+
+
+application = QtGui.QApplication(sys.argv)
+pixmap = QtGui.QPixmap('splash.png')
+splash = QtGui.QSplashScreen(pixmap)
+splash.show()
+window = win.MainWindow()
+splash.finish(window)
+sys.exit(application.exec_())
