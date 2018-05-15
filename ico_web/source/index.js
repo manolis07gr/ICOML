@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 
 import Radar from '../source/components/Radar'
 import Clusterer from '../source/components/Clusterer'
+import ClusterGrid from '../source/components/ClusterGrid'
+import PrxChart from '../source/components/Chart'
 
 import {cluster_data} from './dataset/data'
 import {radar_ecosystem_data} from './dataset/data'
@@ -63,10 +65,16 @@ class App extends Component {
     //console.log("APP RENDERING")
     //console.log("Current state :", this.state)
         return (
-        <div class="row" >
-            <div class="col" style={{ height: 500 }}><Clusterer chart_data={this.state.cluster_chart_data} cluster_callback_function = {this.cluster_callback_function}/></div>
-            <div class="col" style={{ height: 500 }}><Radar chart_data={this.state.radar_chart_data} /></div>
+        <React.Fragment>
+        <div class="row justify-content-md-center" >
+            <div class="col" style={{ height: 450 }}><Clusterer chart_data={this.state.cluster_chart_data} cluster_callback_function = {this.cluster_callback_function}/></div>
+            <div class="col" style={{ height: 450 }}><Radar chart_data={this.state.radar_chart_data} /></div>
+            <div class="col" style={{ height: 450 }}><PrxChart/></div>
         </div>
+        <div class="row justify-content-md-center" >
+            <div class="col"><ClusterGrid/></div>
+        </div>
+        </React.Fragment>
         );
     }
 }
