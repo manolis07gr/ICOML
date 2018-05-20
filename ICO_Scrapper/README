@@ -1,0 +1,81 @@
+The components of ICO_Scrapper compile a complete database of ICO performance
+and characteristics data for use in Machine Learning methods.
+
+The run.sh script runs the python scripts in succession:
+-scrap_icos_main.py only returns results (full, reduced, reduced w ratings')
+for 1 ICO selected by the user
+-scrap_icos_main_full.py loops through all coins on coinmarketcap.com and
+and returns ICO data
+-coindesk_na.py appends the coindesk.com ICO data for the failed (no show
+on coinmarketcap) ICOs
+-google_news.py finds number of Google news articles for ('[coin]+ICO')
+searches. Needs to run several times in the end because Google restricts
+number of searches by search bots to 50 per hour per IP.
+
+Sources used for ICO data:
+1) coinmarketcap.com (timeseries, token names and symbols)
+2) icobench.com
+3) icodrops.com
+4) tokenmarket.com
+5) icorating.com
+6) icomarks.com
+7) coindesk.com (via the coindesk_data.csv file).
+
+The final output for ML is the "ico_data_full.csv" file and the
+"ico_data_full_wr.csv" file. All output is stored in the /outdata
+directory within ICO_Scrapper/.
+
+In the ico_data_full.csv file here is the meaning of the columns:
+
+A. FEATURES
+-start: ICO start date
+-end: ICO end date
+-duration: ICO duration in days
+-age: ICO age to date (since end of the ICO)
+-region: ICO geographical region. Consult the region_category.py file for
+details.
+-industry: ICO industry category. Consult the industry_category.py file for
+details.
+-team: team size
+-raised: Money raised (in USD)
+-hardcap: Fundraising goal (in USD)
+-price: ICO token sale price (in USD)
+-telegram: Number of followers in ICO telegram channel/chat
+-N_google_news: Number of Google News articles
+-N_twitter: Number of Twitter followers
+
+B. PERFORMANCE METRICS
+-ret_ico_to_day_one: Return of investment at the close of day 1 in the
+crypto-exchanges.
+-vol_day1: Trading volume at the close of day 1 in the crypto-exchanges
+-sharpe_1: Sharpe ratio during 1st month of trading in exchanges
+-sharpe_3: Sharpe ration during first 3 months of trading in exchanges
+-sharpe_yr: Annualized Sharpe ratio
+-sharpe_yr2: Annualized Sharpe ratio adjusted for "risk-free" return based on
+performance of top 10 tokens (~80% of total crypto Market Cap)
+-beta_btc: Token beta compared to performance of BTC (~33% of total crypto Market Cap)
+-beta_top10: Token beta compared to performance of top 10 tokens
+-alpha_btc: Token alpha compared to performance of BTC (~33% of total crypto Market Cap)
+-alpha_top10: Token alpha compared to performance of BTC (~33% of total crypto Market Cap)
+
+For tokens not listed on coinmarketcap.com the above values were converted to 
+(-1.0,0.0,-100.,-100.,-100.,-100,-100.,-100.,-100.,-100.) respectively.
+
+The "ico_data_full_wr.csv" file has the same columns as the "ico_data_full.csv"
+file with the exception of two extra columns ("hype" and "risk") based on the
+ICO hype and risk scores from icorating.com (max 1.0).
+
+For social media followers the Telegram channel is more important but where it
+is lacking the Twitter channel can be used.
+
+The "start" and "end" values need not be features for the ML component. The
+"duration" and "age" values on the other hand will suffice.
+
+This leaves the effective total number of features to be 10 and the total number
+of performance indicators to be also 10.
+
+COPYRIGHT:
+Emmanouil (Manos) Chatzopoulos
+
+
+
