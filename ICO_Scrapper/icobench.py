@@ -49,8 +49,12 @@ def func_icobench(currency):
                     ico_raised = float(eval(ttt[0:10].replace(",","")))
                 if len(commas) == 1:
                     ico_raised = float(eval(ttt[0:6].replace(",","")))
-                if len(commas) == 3:
+                if len(commas) == 3 and len(ttt.split(",")[0]) == 2:
                     ico_raised = float(eval(ttt[0:10].replace(",","")))
+		if len(commas) == 3 and len(ttt.split(",")[0]) == 1:
+		    ico_raised = float(eval(ttt[0:9].replace(",","")))
+		if len(commas) == 3 and len(ttt.split(",")[0]) == 3:
+		    ico_raised = float(eval(ttt[0:11].replace(",","")))	   
 		   
     except:
         ico_raised = 'N/A'
@@ -123,7 +127,7 @@ def func_icobench(currency):
                 info = tag3.text
                 for_sale = float(eval((info[info.find("for sale ")+1:info.find(" Sold")]).replace("or sale","").replace(",","").strip()))
                 sold = float(eval((info[info.find("Sold tokens ")+1:info.find("Updated")]).replace("old tokens","").replace(",","").strip()))
-        success = round(sold/for_sale * 100.0,2)
+        success = round(sold/for_sale,2)
     except:
         for_sale = 'N/A'
         sold = 'N/A'
@@ -138,7 +142,7 @@ def func_icobench(currency):
 	        try:
 			ICO_p = float(eval(tag4.text.strip("").replace(" ","").split("\n")[5].split("=")[1].replace("USD","")))
 		except:
-	        	ICO_p = tag4.text.replace(" ","").replace("\n","").split("ICO")[1].split("USD")[0].strip()
+	        	ICO_p = float(eval(tag4.text.replace(" ","").replace("\n","").split("ICO")[1].split("USD")[0].strip()))
 
     except:
         ICO_p = 'N/A'
@@ -150,14 +154,25 @@ def func_icobench(currency):
         value_e =  soup_c.findAll("div", {"class": "row"})
         for tag5 in value_e:
             if 'Hard cap' in tag5.text:
+                #print tag5.text
+                #print tag5.text.replace(" ","").replace("USD","").replace("Hardcap","")
                 if ('USD' not in tag5.text.strip("").split("\n")[0]) and ('ETH' not in tag5.text.strip("").split("\n")[0]):
                     ICO_hardcap = float(tag5.text.strip("").split("\n")[0].split(" ")[3].replace(",",""))*float(ICO_p)
                 if 'USD' in tag5.text.strip("").split("\n")[0]:
-                    ICO_hardcap = float(eval(tag5.text.strip("").split("\n")[0].split(" ")[3].replace(",","")))
+                    #print tag5.text.strip("").split("\n")[0]
+                    ICO_hardcap = float(eval(tag5.text.replace(" ","").replace(",","").replace("USD","").replace("Hardcap","")))
 
 
     except:
         ICO_hardcap = 'N/A'
+
+    try:
+        success1 = round(ico_raised/ICO_hardcap,2)
+    except:
+        success1 = 'N/A'
+    
+    if ICO_hardcap != 'N/A' and ico_raised != 'N/A':
+        success = success1
 
     #Find Industry
 

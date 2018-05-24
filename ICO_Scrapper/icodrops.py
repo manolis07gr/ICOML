@@ -63,7 +63,7 @@ def func_icodrops(currency):
         ICO_hardcap2 = 'N/A'
 
     try:
-        success2 = round((ico_raised2/ICO_hardcap2) * 100., 2)
+        success2 = round((ico_raised2/ICO_hardcap2), 2)
     except:
         success2 = 'N/A'
 

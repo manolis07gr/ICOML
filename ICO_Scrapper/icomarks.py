@@ -79,9 +79,10 @@ def func_icomarks(currency):
         for tag_nnn2 in value_nnn2:
             if 'Hardcap' in tag_nnn2.text.replace(" ",""):
                 ICO_hardcap4a = tag_nnn2.text.replace(" ","").replace("Hardcap:","").replace("\n","")
-                if 'USD' not in ICO_hardcap4a and 'ETH' not in ICO_hardcap4a:
-                    ICO_hardcap4 = float(eval((re.findall('\d+', ICO_hardcap4a ))[0]))
-                    ICO_hardcap4 = ICO_hardcap4 * ICO_p4
+                if ('USD' not in ICO_hardcap4a) and ('ETH' not in ICO_hardcap4a) and ('BTC' not in ICO_hardcap4a):
+		    ICO_hardcap4 = ICO_hardcap4a.replace(",","")
+		    ICO_hardcap4b = [str(s) for s in ICO_hardcap4 if s.isdigit()]
+                    ICO_hardcap4 = float(eval(''.join(ICO_hardcap4b))) * ICO_p4
                 if 'USD' in ICO_hardcap4a:
                     ICO_hardcap4 = float(eval(tag_nnn2.text.replace(" ","").replace("Hardcap:","").replace("\n","").replace("USD","")))
 

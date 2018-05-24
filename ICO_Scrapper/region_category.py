@@ -6,7 +6,7 @@ def func_region(region):
 	region4 = ['uk','u.k.','united kingdom','england','great britain']
 	region5 = ['albania','andorra','austria','belgium','bosnia','bulgaria','croatia','czech republic','denmark','estonia','finland','france','germany','greece','hungary','iceland','ireland','italy','latvia','liechtenstein','lithuania','luxembourg','malta','moldova','monaco','netherlands','norway','poland','portugal','romania','serbia','slovakia','slovenia','spain','sweden']
 	region6 = ['switzerland']
-	region7 = ['singapore','cayman islands','gibraltar','isle of man','isleofman']
+	region7 = ['singapore','cayman islands','gibraltar','isle of man','isleofman','virgin islands','british virgin islands','britishvirginislands','virginislands']
 	region8 = ['japan','south korea','s. korea']
 	region9 = ['australia','new zealand','solomon islands']
 	region10 = ['brazil','brasil','argentina','peru','equador','costa rica','panama','nicaragua','belize','mexico','guatemala','equador','chile','venezuela','uruguay','paraguay','honduras','bolivia','colombia']

@@ -48,9 +48,15 @@ for i in range(1,len(data2_all)):
     symbol[k] = data2_all[i][1].split('\n')[0]
     coin[k] = data2_all[i][1].split('\n')[1].lower()
 
-
-currency = 'hellogold'
-token = 'hgt'
+#currency = coin[355]
+#currency = 'dmarket'
+#token = 'dmt'
+#currency = 'parkgene'
+#token = 'gene'
+currency = 'obsidian'
+token = 'odn'
+#currency = coin[100]
+#token = symbol[100]
 
 #Bitcoin returns
 rbtc = func_btc() 
@@ -287,11 +293,6 @@ except:
     end = end_date_all[0]
     age = age_all[0]
 
-if duration < 0:
-    start = end_date_all[0]
-    end = start_date_all[0]
-    duration = -duration
-
 #2. Determining geographical region
 #2A) First remove all 'N/A' occurences
 country_all = [item for item in country_all if item != 'N/A']
@@ -381,92 +382,119 @@ if (team_all[2] == 'N/A') or (team_all[4] == 'N/A'):
     except:
         team = team_all[0]
 
-#5. Determining success, money raised, hardcap
 
-success = 'N/A'
+#5. Determining money raised
 
-###
+#5C) First remove all 'N/A' occurences
+raised_all = [item for item in raised_all if item != 'N/A']
 
-raised_all2 = [item for item in raised_all if item != 'N/A']
-hardcap_all2 = [item for item in hardcap_all if item != 'N/A']
+#5D) If length of array is zero after removals, then final values are 'N/A'
+if len(raised_all) == 0:
+    raised = 'N/A'
+    raised_all = ['N/A']
 
-if len(raised_all2) == 0:
-    raised_all2 = ['N/A']
-    raised = raised_all2[0]
+#5E) If all values are the same then adopt that value as the final value
+if raised_all.count(raised_all[0]) == len(raised_all):
+    raised = raised_all[0]
 
-if len(hardcap_all2) == 0:
-    hardcap_all2 = ['N/A']
-    hardcap = hardcap_all2[0]
-
-if raised_all2.count(raised_all2[0]) == len(raised_all2):
-    raised = raised_all2[0]
-
-if hardcap_all2.count(hardcap_all2[0]) == len(hardcap_all2):
-    hardcap = hardcap_all2[0]
-
+#5F) If values are not the same then adopt the value that appears most times. If failure adopt first element.
 try:
-    if raised_all2.count(raised_all2[0]) != len(raised_all2):
-        (values,counts) = np.unique(raised_all2,return_counts=True)
+    if raised_all.count(raised_all[0]) != len(raised_all):
+        (values,counts) = np.unique(raised_all,return_counts=True)
         ind=np.argmax(counts)
         raised = values[ind]
          
         if counts.count(counts[0]) == len(counts):
-            raised = raised_all2[0]
+            raised = raised_all[1]
             
 except:
-    raised = raised_all2[0]
+    raised = raised_all[0]
 
-try:
-    if hardcap_all2.count(hardcap_all2[0]) != len(hardcap_all2):
-        (values,counts) = np.unique(hardcap_all2,return_counts=True)
-        ind=np.argmax(counts)
-        hardcap = values[ind]
-         
-        if counts.count(counts[0]) == len(counts):
-            hardcap = hardcap_all2[0]
-            
-except:
-    hardcap = hardcap_all2[0]
+#6. Determining hardcap
 
-if success == 'N/A':
+if hardcap_all[1] != 'N/A':
+    hardcap = hardcap_all[1]
+
+if hardcap_all[1] == 'N/A':
+
+    #6A) First remove all 'N/A' occurences
+    hardcap_all = [item for item in hardcap_all if item != 'N/A']
+
+    #6B) If length of array is zero after removals, then final values are 'N/A', reinstate length of one with value N/A
+    if len(hardcap_all) == 0:
+        hardcap = 'N/A'
+        hardcap_all = ['N/A']
+
+    #6C) If all values are the same then adopt that value as the final value
+    if hardcap_all.count(hardcap_all[0]) == len(hardcap_all):
+        try:
+            hardcap = round(hardcap_all[0],0)
+        except:
+            hardcap = 'N/A'
+
+
+    #6D) If values are not the same then adopt the value that appears most times. If failure adopt first element.
     try:
-        success = min(round(raised/hardcap, 2),1.0)
+        if hardcap_all.count(hardcap_all[0]) != len(hardcap_all):
+            (values,counts) = np.unique(hardcap_all,return_counts=True)
+            if counts.count(counts[0]) == len(counts):
+                hardcap = hardcap_all[1]
+            ind=np.argmax(counts)
+            hardcap = round(values[ind],0)
+    except:
+        hardcap = round(hardcap_all[1],0)
+
+#7. Determining success
+
+#7A) First remove all 'N/A' occurences
+success_all = [item for item in success_all if item != 'N/A']
+
+#7B) If length of array is zero after removals, then final values are 'N/A', reinstate length of one with value N/A
+if len(success_all) == 0:
+    success = 'N/A'
+    success_all = ['N/A']
+
+#7C) If all values are the same then adopt that value as the final value
+if success_all.count(success_all[0]) == len(success_all):
+    success = success_all[0]
+
+#7D) If values are not the same then adopt the value that appears most times. If failure adopt first element.
+try:
+    if success_all.count(success_all[0]) != len(success_all):
+        (values,counts) = np.unique(success_all,return_counts=True)
+        if counts.count(counts[0]) == len(counts):
+            success = min(round(success_all[1],2),1.0)
+        ind=np.argmax(counts)
+        success = min(round(values[ind],2),1.0)
+except:
+    success = min(round(success_all[1],2),1.0)
+
+
+if success != 'N/A':   
+    try:
+        success = min(success,1.0)
     except:
         success = 'N/A'
         
-success_all2 = [item for item in success_all if item != 'N/A']
 
-if len(success_all2) == 0:
-    success_all2 = ['N/A']
-    success = success_all2[0]
-
-
-if (success_all[0] != 'N/A') and (success_all[1] == 'N/A') and (success_all[2] == 'N/A'):
-    success = min(success_all[0],1.0)
-    raised = raised_all[0]
-    hardcap = hardcap_all[0]
-
-if (success_all[0] == 'N/A') and (success_all[1] != 'N/A') and (success_all[2] == 'N/A'):
-    success = min(success_all[1],1.0)
-    raised = raised_all[1]
-    hardcap = hardcap_all[1]
-
-if (success_all[0] != 'N/A') and (success_all[1] != 'N/A') and (success_all[2] == 'N/A'):
-    success = min(success_all[1],1.0)
-    raised = raised_all[1]
-    hardcap = hardcap_all[1]
-
-if (success_all[0] == 'N/A') and (success_all[1] == 'N/A') and (success_all[2] != 'N/A'):
-    success = min(success_all[2],1.0)
-    raised = raised_all[2]
-    hardcap = hardcap_all[2]
-
+#8. Determining success
 if success == 'N/A':
     try:
         success = min(round(raised/hardcap, 2),1.0)
     except:
-        success = 'N/A'
-    
+        try:
+            success = success
+        except:
+            success = 'N/A'
+
+if success == 1.0 and raised/hardcap != 1.0:
+    raised = hardcap
+
+if hardcap == 'N/A':
+    try:
+        hardcap = raised/success
+    except:
+        hardcap = 'N/A'
 
 #9. Determining ICO token price
 #9A) Check if data availabe from icobench or icodrops or icomarks. If yes adopt this money raised value

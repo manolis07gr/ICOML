@@ -28,12 +28,12 @@ from region_category import func_region
 from industry_category import func_industry
 warnings.filterwarnings("ignore")
 
-currency = 'adex'
-token = 'adx'
-#currency = 'parkgene'
-#token = 'gene'
+currency = 'sportyco'
+token = 'spf'
+#currency = 'bread'
+#token = 'brd'
 
-#print func_icomarks(currency)
+#print func_icobench(currency)
 
 res = func_icobench(currency)
 res2 = func_icodrops(currency)
@@ -42,4 +42,3 @@ res4 = func_icorating(currency,token)
 res5 = func_icomarks(currency)
 res6 = func_googletwitter(currency)
 print res,res2,res3,res4,res5,res6
-
