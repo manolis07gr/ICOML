@@ -49,8 +49,8 @@ for i in range(1,len(data2_all)):
     coin[k] = data2_all[i][1].split('\n')[1].lower()
 
 
-currency = 'hellogold'
-token = 'hgt'
+currency = 'tron'
+token = 'trx'
 
 #Bitcoin returns
 rbtc = func_btc() 
@@ -212,7 +212,7 @@ except:
 
 columnTitles = "coin,start1,end1,duration1,age1,start3,end3,duration3,age3,start4,end4,duration4,age4,start5,end5,duration5,age5,country1,country2,country3,country5,industry1,industry2,industry4,team1,team2,team3,team4,team5,raised1,raised2,raised4,raised5,hardcap1,hardcap2,hardcap4,hardcap5,success1,success2,success4,price1,price2,price4,price5,telegram1,telegram2,telegram4,N_google_news,N_twitter,hype4,risk4,ret_day1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
-with open('outdata/ico_data_full.csv', 'w') as csvfile1:
+with open('outdata/ico_data_full_single.csv', 'w') as csvfile1:
     csvfile1.write(columnTitles)
     writer=csv.writer(csvfile1, delimiter=',')
     writer.writerow([currency,start1,end1,duration1,age1,start3,end3,duration3,age3,start4,end4,duration4,age4,start5,end5,duration5,age5,country1,country2,country3,country5,industry1,industry2,industry4,team1,team2,team3,team4,team5,raised1,raised2,raised4,raised5,hardcap1,hardcap2,hardcap4,hardcap5,success1,success2,success4,price1,price2,price4,price5,telegram1,telegram2,telegram4,N_google_news,N_twitter,hype4,risk4,ret_day1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
@@ -472,12 +472,12 @@ if success == 'N/A':
 #9A) Check if data availabe from icobench or icodrops or icomarks. If yes adopt this money raised value
 if (price_all[0] != 'N/A') or (price_all[1] != 'N/A') or (price_all[3] != 'N/A'):
     try:
-        price = round(price_all[0],2)
+        price = round(price_all[0],3)
     except:
         try:
-            price = round(price_all[1],2)
+            price = round(price_all[1],3)
         except:
-            price = round(price_all[3],2)
+            price = round(price_all[3],3)
 
 #9B) In the opposite case, proceed as before
 if (price_all[0] == 'N/A') or (price_all[1] == 'N/A') or (price_all[3] == 'N/A'):
@@ -493,7 +493,7 @@ if (price_all[0] == 'N/A') or (price_all[1] == 'N/A') or (price_all[3] == 'N/A')
 #9E) If all values are the same then adopt that value as the final value
     if price_all.count(price_all[0]) == len(price_all):
         try:
-            price = round(price_all[0],2)
+            price = round(price_all[0],3)
         except:
             price = 'N/A'
 
@@ -502,15 +502,15 @@ if (price_all[0] == 'N/A') or (price_all[1] == 'N/A') or (price_all[3] == 'N/A')
         if price_all.count(price_all[0]) != len(price_all):
             (values,counts) = np.unique(price_all,return_counts=True)
             if counts.count(counts[0]) == len(counts):
-                price = round(price_all[0],2)
+                price = round(price_all[0],3)
             ind=np.argmax(counts)
-            price = round(values[ind],2)
+            price = round(values[ind],3)
     except:
         try:
-            price = round(price_all[0],2)
+            price = round(price_all[0],3)
         except:
             try:
-                price = round(price_all[1],2)
+                price = round(price_all[1],3)
             except:
                 price = 'N/A'
 
@@ -550,7 +550,7 @@ ret_icoday1 = ret_icoday1
         
 columnTitles2 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
-with open('outdata/ico_data_reduced.csv', 'w') as csvfile2:
+with open('outdata/ico_data_reduced_single.csv', 'w') as csvfile2:
     csvfile2.write(columnTitles2)
     writer=csv.writer(csvfile2, delimiter=',')
     writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
@@ -566,7 +566,7 @@ risk = risk4
 
 columnTitles3 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
-with open('outdata/ico_data_reduced_wratings.csv', 'w') as csvfile3:
+with open('outdata/ico_data_reduced_wratings_single.csv', 'w') as csvfile3:
     csvfile3.write(columnTitles3)
     writer=csv.writer(csvfile3, delimiter=',')
     writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])

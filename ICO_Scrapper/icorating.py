@@ -184,7 +184,7 @@ def func_icorating(currency,token):
         value_s8b =  soup_s4b.findAll("div", {"class": "uk-width-1-2 table"})
         for tag8b in value_s8b:
             if 'Token price' in tag8b.text:
-                ICO_p3 =round(float(tag8b.text.replace("\n","").replace(" ","").split("=")[1].split("USD")[0].replace(" ","")),2)
+                ICO_p3 =round(float(tag8b.text.replace("\n","").replace(" ","").split("=")[1].split("USD")[0].replace(" ","")),3)
 
     except:   
         ICO_p3 = 'N/A'
