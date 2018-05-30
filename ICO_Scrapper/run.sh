@@ -17,6 +17,10 @@ python reduce_na_wratings.py
 cat outdata/coindesk_na_wr_data.csv >> outdata/ico_data_reduced_wr_noNA.csv
 mv outdata/ico_data_reduced_wr_noNa.csv outdata/ico_data_full_wr.csv
 
+#Copy outdata to outdata2 folder to use import_google_data.py to get google news
+#N/A are the ones that will have to be done manually
+cp -r outdata outdata2
+
 #in the end need to run google_search.py to add Google news data
 #this is because Google restricts search bots to 50 searches an hour per IP
 #python google_news.py
