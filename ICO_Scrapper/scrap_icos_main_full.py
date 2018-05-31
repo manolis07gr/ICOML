@@ -495,12 +495,12 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
         #9A) Check if data availabe from icobench or icodrops or icomarks. If yes adopt this money raised value
         if (price_all[0] != 'N/A') or (price_all[1] != 'N/A') or (price_all[3] != 'N/A'):
             try:
-                price = round(price_all[0],3)
+                price = round(price_all[0],5)
             except:
                 try:
-                    price = round(price_all[1],3)
+                    price = round(price_all[1],5)
                 except:
-                    price = round(price_all[3],3)
+                    price = round(price_all[3],5)
 
         #9B) In the opposite case, proceed as before
         if (price_all[0] == 'N/A') or (price_all[1] == 'N/A') or (price_all[3] == 'N/A'):
@@ -516,7 +516,7 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
         #9E) If all values are the same then adopt that value as the final value
             if price_all.count(price_all[0]) == len(price_all):
                 try:
-                    price = round(price_all[0],3)
+                    price = round(price_all[0],5)
                 except:
                     price = 'N/A'
 
@@ -525,15 +525,15 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
                 if price_all.count(price_all[0]) != len(price_all):
                     (values,counts) = np.unique(price_all,return_counts=True)
                     if counts.count(counts[0]) == len(counts):
-                        price = round(price_all[0],3)
+                        price = round(price_all[0],5)
                     ind=np.argmax(counts)
-                    price = round(values[ind],3)
+                    price = round(values[ind],5)
             except:
                 try:
-                    price = round(price_all[0],3)
+                    price = round(price_all[0],5)
                 except:
                     try:
-                        price = round(price_all[1],3)
+                        price = round(price_all[1],5)
                     except:
                         price = 'N/A'
 
@@ -565,9 +565,10 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
         #11) Calculating first day exchange returns compared to ICO token price
 
         try:
-            ret_icoday1 = round((c[0] - price)/price,2)
+            ret_icoday1 = round((c[0] - price)/price,3)
         except:
-            ret_icoday1 = 'N/A'
+            #ret_icoday1 = 'N/A'
+	    ret_icoday1 = 0.0
 
         ret_icoday1 = ret_icoday1
 
