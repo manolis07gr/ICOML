@@ -48,19 +48,25 @@ for i in range(1,len(data2_all)):
     symbol[k] = data2_all[i][1].split('\n')[0]
     coin[k] = data2_all[i][1].split('\n')[1].lower()
 
-#currency = coin[355]
-#currency = 'dmarket'
-#token = 'dmt'
-#currency = 'parkgene'
-#token = 'gene'
-currency = 'covesting'
-token = 'cov'
-#currency = coin[100]
-#token = symbol[100]
+with open('nan_coins2.txt', 'r') as myfile:
+    data111=myfile.read().split('\n')
 
-currency2 = ['covesting','crypterium','parkgene','dmarket']
-token2 = ['cov','crpt','gene','dmt']
+data111 = data111[0:len(data111)-1]
 
+data222 = []
+k = -1
+for i in range(0,len(data111)):
+    for j in range(0,len(coin)):
+        if data111[i] == coin[j]:
+            k = k + 1
+            data222.append(k)
+            data222[k] = symbol[j]
+
+#Lines below need to be enabled only for tokens with different link names
+data111 = ['nebulas','ambrosus','crypto20','decentbet','bloom','medicalchain','cofound.it','matchpool','agrello','locktrip','friendz','wetrust','spectiv','eboost','bitjob','escroco','peerguess']
+data222 = ['nas','amb','c20','dbet','blt','mtn','cfi','gup','dlt','loc','fdz','trst','sig','ebst','stu','esc','guess']
+data333 = ['nebulas-token','amber','c20','decent-bet','bloomtoken','medical-chain','cofound-it','guppy','agrello-delta','lockchain','friends','trust','signal-token','eboostcoin','student-coin','escoro','guess']
+    
 #Bitcoin returns
 rbtc = func_btc() 
 #Average returns of Top 10 coins
@@ -74,7 +80,7 @@ columnTitles2 = "coin,start,end,duration,age,region,industry,team,raised,hardcap
 
 columnTitles3 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
-with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_reduced.csv', 'w') as csvfile2, open('outdata/ico_data_reduced_wratings.csv', 'w') as csvfile3:
+with open('outdata/ico_data_full_nans2.csv', 'w') as csvfile1, open('outdata/ico_data_reduced_nans2.csv', 'w') as csvfile2, open('outdata/ico_data_reduced_wratings_nans2.csv', 'w') as csvfile3:
     csvfile1.write(columnTitles)
     writer=csv.writer(csvfile1, delimiter=',')
     csvfile2.write(columnTitles2)
@@ -83,12 +89,13 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
     writer3=csv.writer(csvfile3, delimiter=',')
 
     for i in range(0,len(coin)):
-        #currency = coin[i]
-        currency = coin[i].replace(' ','-')
-        token = symbol[i]
+        currency = data111[i].replace(' ','-')
+        token = data222[i]
+        #link_web = currency
+        link_web = data333[i]
 
         try:
-            data = urllib2.urlopen('https://coinmarketcap.com/currencies/'+currency+'/historical-data/?start=20130428&end='+today)
+            data = urllib2.urlopen('https://coinmarketcap.com/currencies/'+link_web+'/historical-data/?start=20130428&end='+today)
             soup = BeautifulSoup(data, 'html.parser')
 
             table = soup.find("table")

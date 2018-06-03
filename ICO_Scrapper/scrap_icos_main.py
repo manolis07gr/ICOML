@@ -49,8 +49,10 @@ for i in range(1,len(data2_all)):
     coin[k] = data2_all[i][1].split('\n')[1].lower()
 
 
-currency = 'tron'
-token = 'trx'
+currency = 'escroco'
+token = 'esc'
+website_str = currency
+website_str = 'escoro'
 
 #Bitcoin returns
 rbtc = func_btc() 
@@ -60,7 +62,7 @@ rt10 = func_top10()
 today = dt.datetime.now().date().isoformat().replace('-',"")
 
 try:
-    data = urllib2.urlopen('https://coinmarketcap.com/currencies/'+currency+'/historical-data/?start=20130428&end='+today)
+    data = urllib2.urlopen('https://coinmarketcap.com/currencies/'+website_str+'/historical-data/?start=20130428&end='+today)
     soup = BeautifulSoup(data, 'html.parser')
 
     table = soup.find("table")
@@ -178,7 +180,7 @@ except:
 [N_google_news,N_twitter]=[res6[2],res6[1]]
 
 try:
-    ret_day1a = round(c[0],2)
+    ret_day1a = round(c[0],3)
 except:
     ret_day1a = 'N/A'
     
