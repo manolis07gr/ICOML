@@ -6,7 +6,7 @@ with open("outdata/ico_data_full.csv") as f1:
     reader1 = csv.reader(f1)
     data1 = [r for r in reader1]
 
-with open("outdata2/ico_data_full.csv") as f2:
+with open("outdata2/ico_data_full_final.csv") as f2:
     reader2 = csv.reader(f2)
     data2 = [r for r in reader2]
 

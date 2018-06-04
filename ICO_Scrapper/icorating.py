@@ -72,7 +72,7 @@ def func_icorating(currency,token):
     team4 = 'N/A'
     ico_raised3 = 'N/A'
     industry3 = 'N/A'
-
+    
     try:
         value_s4a =  soup_s4.findAll("table", {"class": "uk-table"})
         for tag4a in value_s4a:
@@ -106,19 +106,27 @@ def func_icorating(currency,token):
     #Find ICO rating
     ICO_rating_hype = 'N/A'
     ICO_rating_risk = 'N/A'
-
+    
     try:
         value_s6a =  soup_s4.findAll("div", {"class": "white-block-area"})
         for tag6a in value_s6a:
             if 'score' in tag6a.text:
-                sss = tag6a.text.replace("\n","").split("Hype score")[1].replace("5.0","").split("/")
-                s1h = sss[0].find('.')
-                s1r = sss[1].find('.')
-                ICO_rating_hype = round(eval(sss[0][s1h-1]+sss[0][s1h+1]) * 2.0, 2)
-                ICO_rating_risk = round(eval(sss[1][s1r-1]+sss[1][s1r+1]) * 2.0, 2)
+                ind1 = tag6a.text.replace('\n','').replace(' ',"").split('Hypescore')[1].find("/")
+		ICO_rating_hype = round(eval(tag6a.text.replace('\n','').replace(' ',"").split('Hypescore')[1][ind1-3:ind1]) / 5.0,2)
+
     except:   
         ICO_rating_hype = 'N/A'
-        ICO_rating_risk = 'N/A'
+	
+    try:
+        value_s6a =  soup_s4.findAll("div", {"class": "white-block-area"})
+        for tag6a in value_s6a:
+            if 'score' in tag6a.text:
+		ind1 = tag6a.text.replace('\n','').replace(' ',"").split('Riskscore')[1].find(".")
+		ICO_rating_risk = round(eval(tag6a.text.replace('\n','').replace(' ',"").split('Riskscore')[1][ind1-3:ind1]) / 5.0,2)
+
+    except:   
+        ICO_rating_risk = 'N/A'	
+	
 
     #Find ICO Money Raised
     ico_raised3 = 'N/A'

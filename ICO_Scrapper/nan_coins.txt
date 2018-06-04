@@ -47,3 +47,21 @@ silent notary
 xyo network
 sphre air
 ox fina
+nebulas
+iexec-rlc
+ambrosus
+crypto20
+decentbet
+medicalchain
+bloom
+cofound.it
+matchpool
+agrello
+hubii-network
+wetrust
+spectiv
+eroscoin
+eboost
+bitjob
+peerguess
+escroco

@@ -1,2 +1,2 @@
 coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10
-nebulas,8 Dec 2017,16 Dec 2017,8.0,169.0,1,saas,19,60000000.0,60000000.0,1.0,2.0,12065,2,22489,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+parkgene,15 Jan 2018,19 Mar 2018,63.0,76.0,7,fintech,5,24335000.0,35000000.0,0.7,0.1,6970,4,775,-0.87,58791,-0.13,-1.05,-2.1,-2.19,-0.53,-0.784,-0.016,-0.013
