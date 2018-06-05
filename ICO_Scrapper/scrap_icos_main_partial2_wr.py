@@ -57,7 +57,7 @@ data222 = []
 k = -1
 for i in range(0,len(data111)):
     for j in range(0,len(coin)):
-        if data111[i] == coin[j]:
+        if data111[i].replace('-',' ') == coin[j]:
             k = k + 1
             data222.append(k)
             data222[k] = symbol[j]
@@ -88,7 +88,7 @@ with open('outdata/ico_data_full_nans2_wr.csv', 'w') as csvfile1, open('outdata/
     csvfile3.write(columnTitles3)
     writer3=csv.writer(csvfile3, delimiter=',')
 
-    for i in range(0,len(coin)):
+    for i in range(0,len(data111)):
         currency = data111[i].replace(' ','-')
         token = data222[i]
         #link_web = currency

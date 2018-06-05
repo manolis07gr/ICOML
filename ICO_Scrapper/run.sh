@@ -41,15 +41,7 @@ python scrap_icos_main_partial2.py
 python replaces_nans2.py
 
 cp outdata/ico_data_full3.csv outdata/ico_data_full_final.csv
+python resets_hype.py
 
-#SAME but including the icorating ratings
-python rescan1_wr.py >> nan_coins_wr.txt
-python scrap_icos_main_partial1_wr.py
-python replaces_nans1_wr.py
-python rescan2_wr.py >> nan_coins2_wr.txt
-python scrap_icos_main_partial2_wr.py
-python replaces_nans2_wr.py
-
-cp outdata/ico_data_full3_wr.csv outdata/ico_data_full_wr_final.csv
-#PRODUCES: ico_data_full_final.csv and ico_data_full_wr_final.csv
+#FINAL PRODUCTS: ico_data_full_final.csv and ico_data_full_final_hype.csv
 
