@@ -42,6 +42,13 @@ python replaces_nans2.py
 
 cp outdata/ico_data_full3.csv outdata/ico_data_full_final.csv
 python resets_hype.py
+python resets_google.py
+cp outdata/ico_data_full_final_b.csv outdata/ico_data_full_final.csv
+cp outdata/ico_data_full_final_hype_b.csv outdata/ico_data_full_final_hype.csv
+python uniform_set_extract.py
+
+#FINAL PRODUCTS: outdata/ico_data_full_final.csv, outdata/ico_data_full_final_hype.csv
+# and outdata/ico_data_full_final_hype_uniform.csv
 
 #FINAL PRODUCTS: ico_data_full_final.csv and ico_data_full_final_hype.csv
 
