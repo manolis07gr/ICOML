@@ -506,7 +506,7 @@ with open('outdata/ico_data_full_nans2.csv', 'w') as csvfile1, open('outdata/ico
         if raised != 'N/A' and success != 'N/A':
             hardcap = round(raised/success,0)
 
-        if team = 0:
+        if team == 0:
             team = 'N/A'
 
 

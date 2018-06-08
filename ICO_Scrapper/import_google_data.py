@@ -18,7 +18,7 @@ with open('outdata/ico_google_new.csv', 'w') as csvfile_b:
         col2 = 'N/A'
         for j in range(1,np.shape(data2)[0]):
             #if data2[j][0].replace(' ','-') == data1[i][0]:
-	        if data2[j][0] == data1[i][0]:
+            if data2[j][0] == data1[i][0]:
                 col2 = data2[j][13]
 	        	#col2 = data2[j][1]
 

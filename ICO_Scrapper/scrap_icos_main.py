@@ -474,7 +474,7 @@ except:
 if raised != 'N/A' and success != 'N/A':
     hardcap = round(raised/success,0)
 
-if team = 0:
+if team == 0:
     team = 'N/A'
     
 
