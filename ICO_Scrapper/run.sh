@@ -1,5 +1,6 @@
 #Copy outdata to outdata2 folder to use import_google_data.py to get google news
 #N/A are the ones that will have to be done manually
+rm -rf outdata2
 cp -r outdata outdata2
 rm outdata/*
 
@@ -49,6 +50,3 @@ python uniform_set_extract.py
 
 #FINAL PRODUCTS: outdata/ico_data_full_final.csv, outdata/ico_data_full_final_hype.csv
 # and outdata/ico_data_full_final_hype_uniform.csv
-
-#FINAL PRODUCTS: ico_data_full_final.csv and ico_data_full_final_hype.csv
-

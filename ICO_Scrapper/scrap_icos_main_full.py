@@ -488,6 +488,17 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
             except:
                 success = 'N/A'
 
+        try:
+            hardcap = round(hardcap,0)
+        except:
+            hardcap = 'N/A'
+	
+        if raised != 'N/A' and success != 'N/A':
+            hardcap = round(raised/success,0)
+
+        if team = 0:
+            team = 'N/A'
+
 
         #9. Determining ICO token price
         #9A) Check if data availabe from icobench or icodrops or icomarks. If yes adopt this money raised value

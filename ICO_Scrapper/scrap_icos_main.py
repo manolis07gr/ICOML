@@ -49,8 +49,8 @@ for i in range(1,len(data2_all)):
     coin[k] = data2_all[i][1].split('\n')[1].lower()
 
 
-currency = 'parkgene'
-token = 'gene'
+currency = 'holo'
+token = 'hot'
 website_str = currency
 #website_str = 'escoro'
 
@@ -465,6 +465,17 @@ if success == 'N/A':
         success = min(round(raised/hardcap, 2),1.0)
     except:
         success = 'N/A'
+	
+try:
+    hardcap = round(hardcap,0)
+except:
+    hardcap = 'N/A'
+	
+if raised != 'N/A' and success != 'N/A':
+    hardcap = round(raised/success,0)
+
+if team = 0:
+    team = 'N/A'
     
 
 #9. Determining ICO token price
