@@ -50,3 +50,4 @@ python uniform_set_extract.py
 
 #FINAL PRODUCTS: outdata/ico_data_full_final.csv, outdata/ico_data_full_final_hype.csv
 # and outdata/ico_data_full_final_hype_uniform.csv
+#USE Google open browser tabs to replace new N/A google news results with values
