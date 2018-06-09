@@ -1,0 +1,61 @@
+from flask import Flask, jsonify
+import pandas as pd
+import numpy as np
+from core.ml import ico_clusterer, ico_ann_remove_features, ico_industries
+from sklearn.neural_network import MLPClassifier
+from flask import request
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return "Hello, World from [company_name]!"
+
+
+@app.route('/cluster_icos', methods=['GET'])
+def cluster_icos():
+    raw_ico_data = pd.read_csv('../data/ico_data_raw.csv')
+
+    k_means_model, ico_data_model  = ico_clusterer(raw_ico_data)
+    ico_data_model['cluster'] = k_means_model.labels_
+    cluster_data = ico_data_model
+    X = ico_data_model.as_matrix()
+    y = k_means_model.labels_
+
+    ico_ann = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)
+    ico_ann.fit(X, y)
+    return cluster_data.to_json()
+
+
+@app.route('/investigate_ico', methods=['GET'])
+def investigate_ico():
+    raw_ico_data = pd.read_csv('../data/ico_data_raw.csv')
+
+    k_means_model, ico_data_model = ico_clusterer(raw_ico_data)
+
+    ico_data_model = ico_data_model.drop(ico_ann_remove_features, 1)
+
+    X = ico_data_model.as_matrix()
+    y = k_means_model.labels_
+
+    ico_ann = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)
+    ico_ann.fit(X, y)
+
+    age_days = request.args.get('age_days', default=448, type=int)
+    region = request.args.get('region', default=7, type=int)
+    hardcap = request.args.get('hardcap', default=15000000, type=int)
+    telegram = request.args.get('telegram', default=14000, type=int)
+    team = request.args.get('team', default=15, type=int)
+    N_google_news = request.args.get('N_google_news', default=1, type=int)
+    N_twitter = request.args.get('N_twitter', default=165000, type=int)
+    price = request.args.get('price', default=0.5, type=float)
+    industry = request.args.get('industry', default='blockchain', type=str)
+
+    x = np.array([age_days,region,hardcap,telegram,team,N_google_news,N_twitter,price,ico_industries.index(industry)])
+    ico_classification = ico_ann.predict(x.reshape(1, -1))
+    return jsonify(ico_classification.tolist())
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

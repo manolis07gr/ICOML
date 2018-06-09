@@ -2,37 +2,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import shutil
 
-from sklearn.cluster import KMeans
+from core.ml import ico_clusterer, radar_chart_features
 from core.utilities import export_cluster_radar_json, construct_cluster_data, export_cluster_regression
 
 raw_ico_data = pd.read_csv('../data/ico_data_raw.csv')
-
-ico_model_features = ['age', 'region', 'industry',
-                      'hardcap', 'raised',
-                      'telegram', 'team', 'N_google_news', 'N_twitter',
-                      'price', 'ret_ico_to_day_one']
-
-radar_chart_features = ['age', 'hardcap', 'raised',
-                        'telegram', 'team', 'N_google_news', 'N_twitter',
-                        'price', 'ret_ico_to_day_one']
-
-raw_ico_data = raw_ico_data.dropna()
-
-ico_data_model = raw_ico_data[ico_model_features]
-ico_data_model = pd.get_dummies(data=ico_data_model, columns=['region', 'industry'])
-
-clustering_clusters = 7
-
-k_means_model = KMeans(n_clusters=clustering_clusters, random_state=0).fit(ico_data_model)
-
-log_returns = ico_data_model['ret_ico_to_day_one'].as_matrix()
+k_means_model, ico_data_model = ico_clusterer(raw_ico_data)
+ico_data_model['cluster'] = k_means_model.labels_
+clusters_data = ico_data_model
 
 #plt.scatter(k_means_model.labels_, log_returns, c=k_means_model.labels_)
 #plt.title("Cluster of log returns")
 #plt.show()
-
-raw_ico_data['cluster'] = k_means_model.labels_
-
 
 ico_ecosystem_file = open("./output/ico_clusters.json", "w+")
 
@@ -47,7 +27,7 @@ for radar_chart_feature in radar_chart_features:
 no_icos = 0
 labels = set(k_means_model.labels_)
 no_clusters = len(labels)
-consolidated_cluster_data = construct_cluster_data(raw_ico_data, labels)
+consolidated_cluster_data = construct_cluster_data(clusters_data, labels)
 
 
 for c in labels:
@@ -81,8 +61,8 @@ for c in labels:
         print("]}", file=ico_ecosystem_file)
 print("""]}""", file=ico_ecosystem_file)
 
-strongest_ico_data = raw_ico_data[raw_ico_data['coin'] == strongest_ico]
-weakest_ico_data = raw_ico_data[raw_ico_data['coin'] == weakest_ico]
+strongest_ico_data = clusters_data[clusters_data['coin'] == strongest_ico]
+weakest_ico_data = clusters_data[clusters_data['coin'] == weakest_ico]
 
 for radar_chart_feature in radar_chart_features:
     avg_cluster_data[radar_chart_feature] /= no_icos
