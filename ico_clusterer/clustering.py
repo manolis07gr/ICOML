@@ -6,7 +6,7 @@ from core.ml import ico_clusterer, radar_chart_features
 from core.utilities import export_cluster_radar_json, construct_cluster_data, export_cluster_regression
 
 raw_ico_data = pd.read_csv('../data/ico_data_raw.csv')
-k_means_model, ico_data_model = ico_clusterer(raw_ico_data)
+k_means_model, ico_data_model = ico_clusterer(raw_ico_data, save=True)
 ico_data_model['cluster'] = k_means_model.labels_
 clusters_data = ico_data_model
 

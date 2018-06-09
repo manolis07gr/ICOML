@@ -1,8 +1,10 @@
+import datetime
+import pickle
+
 from flask import Flask, jsonify
 import pandas as pd
 import numpy as np
-from core.ml import ico_clusterer, ico_ann_remove_features, ico_industries
-from sklearn.neural_network import MLPClassifier
+from core.ml import ico_clusterer, ico_industries
 from flask import request
 
 app = Flask(__name__)
@@ -13,34 +15,25 @@ def index():
     return "Hello, World from [company_name]!"
 
 
-@app.route('/cluster_icos', methods=['GET'])
+@app.route('/save_models', methods=['GET'])
 def cluster_icos():
     raw_ico_data = pd.read_csv('../data/ico_data_raw.csv')
+    ico_clusterer(raw_ico_data, save=True)
 
-    k_means_model, ico_data_model  = ico_clusterer(raw_ico_data)
-    ico_data_model['cluster'] = k_means_model.labels_
-    cluster_data = ico_data_model
-    X = ico_data_model.as_matrix()
-    y = k_means_model.labels_
-
-    ico_ann = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)
-    ico_ann.fit(X, y)
-    return cluster_data.to_json()
+    return "Models saved!"
 
 
 @app.route('/investigate_ico', methods=['GET'])
 def investigate_ico():
-    raw_ico_data = pd.read_csv('../data/ico_data_raw.csv')
+    now = datetime.datetime.now()
 
-    k_means_model, ico_data_model = ico_clusterer(raw_ico_data)
+    timestamp = str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2)
+    path_to_file = '../models/'
+    ann_model_filename = 'classifier_' + timestamp + '.pickle'
+    full_path = path_to_file + ann_model_filename
 
-    ico_data_model = ico_data_model.drop(ico_ann_remove_features, 1)
-
-    X = ico_data_model.as_matrix()
-    y = k_means_model.labels_
-
-    ico_ann = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)
-    ico_ann.fit(X, y)
+    with open(full_path, 'rb') as f:
+        pickle_ann_model = pickle.load(f)
 
     age_days = request.args.get('age_days', default=448, type=int)
     region = request.args.get('region', default=7, type=int)
@@ -53,7 +46,7 @@ def investigate_ico():
     industry = request.args.get('industry', default='blockchain', type=str)
 
     x = np.array([age_days,region,hardcap,telegram,team,N_google_news,N_twitter,price,ico_industries.index(industry)])
-    ico_classification = ico_ann.predict(x.reshape(1, -1))
+    ico_classification = pickle_ann_model.predict(x.reshape(1, -1))
     return jsonify(ico_classification.tolist())
 
 

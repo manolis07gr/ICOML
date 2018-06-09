@@ -2,6 +2,7 @@ import pandas as pd
 from math import log10
 import statsmodels.formula.api as sm
 
+
 def construct_cluster_data(raw_ico_data, clusters):
     consolidated_cluster_data = pd.DataFrame()
     for c in clusters:
