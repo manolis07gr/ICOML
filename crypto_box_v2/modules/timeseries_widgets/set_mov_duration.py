@@ -1,11 +1,11 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import misc_parameters as mp
 
 
-class SetMovDuration(QtGui.QPushButton):
+class SetMovDuration(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'Mov range')
+        QtWidgets.QPushButton.__init__(self, 'Mov range')
         self.setStatusTip('Set the time interval for the moving average and standard deviation.')
 
         self.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -20,7 +20,7 @@ class SetMovDuration(QtGui.QPushButton):
         except:
             pass
 
-        self.widgetList = QtGui.QListWidget(self.mainWidget)
+        self.widgetList = QtWidgets.QListWidget(self.mainWidget)
         widgetList = self.widgetList
         widgetList.setAlternatingRowColors(True)
 
@@ -28,10 +28,10 @@ class SetMovDuration(QtGui.QPushButton):
         widgetList.addItem(mp.strMFourWeeks)
         widgetList.addItem(mp.strMThreeMonths)
 
-        widgetList.setGeometry(QtGui.QWidget.geometry(self))
-        widgetList.setMinimumWidth(QtGui.QWidget.size(self).width())
+        widgetList.setGeometry(QtWidgets.QWidget.geometry(self))
+        widgetList.setMinimumWidth(QtWidgets.QWidget.size(self).width())
         widgetList.setMinimumHeight(60)
-        widgetList.move(QtGui.QWidget.pos(self).x(), QtGui.QWidget.pos(self).y() - 60)
+        widgetList.move(QtWidgets.QWidget.pos(self).x(), QtWidgets.QWidget.pos(self).y() - 60)
         widgetList.setFocusPolicy(QtCore.Qt.NoFocus)
         widgetList.show()
 

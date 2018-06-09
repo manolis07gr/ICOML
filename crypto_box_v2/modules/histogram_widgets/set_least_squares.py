@@ -1,9 +1,8 @@
-from PySide import QtGui
+from PyQt5 import QtWidgets
 
-
-class SetLeastSquaresLine(QtGui.QCheckBox):
+class SetLeastSquaresLine(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Lst sqr')
+        QtWidgets.QCheckBox.__init__(self, 'Lst sqr')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Perform linear regression and plot the line that is based on the least squares method')
@@ -18,9 +17,9 @@ class SetLeastSquaresLine(QtGui.QCheckBox):
         self.mainWidget.histogramGraph.plotStatistics()
 
 
-class SetStdLine(QtGui.QCheckBox):
+class SetStdLine(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Lst sqr err')
+        QtWidgets.QCheckBox.__init__(self, 'Lst sqr err')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Show the standard deviation of the error')

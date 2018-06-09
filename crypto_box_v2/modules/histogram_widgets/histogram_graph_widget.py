@@ -1,4 +1,4 @@
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.figure as mfg
 import scipy.stats as ss
 import matplotlib.pylab as plb

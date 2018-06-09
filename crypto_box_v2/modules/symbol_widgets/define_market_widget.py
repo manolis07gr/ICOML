@@ -1,12 +1,12 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import file_parameters as fp
 import symbol_list_class as slc
 
 
-class ButtonDefineMarket(QtGui.QPushButton):
+class ButtonDefineMarket(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'Set index')
+        QtWidgets.QPushButton.__init__(self, 'Set index')
         self.mainWidget = mainWidget
         self.setFocusPolicy(QtCore.Qt.NoFocus)
 
@@ -37,14 +37,14 @@ class ButtonDefineMarket(QtGui.QPushButton):
             self.setDown(False)
             firstCall = False
 
-        self.widgetList = QtGui.QListWidget(self.mainWidget)
+        self.widgetList = QtWidgets.QListWidget(self.mainWidget)
         widgetList = self.widgetList
         widgetList.setAlternatingRowColors(True)
         for iMarket in self.mainWidget.marketList:
             widgetList.addItem(iMarket.description)
-        widgetList.setGeometry(QtGui.QWidget.geometry(self))
+        widgetList.setGeometry(QtWidgets.QWidget.geometry(self))
         widgetList.setMinimumHeight(150)
-        widgetList.move(QtGui.QWidget.pos(self).x() - QtGui.QWidget.size(self).width(), QtGui.QWidget.pos(self).y())
+        widgetList.move(QtWidgets.QWidget.pos(self).x() - QtWidgets.QWidget.size(self).width(), QtWidgets.QWidget.pos(self).y())
         widgetList.setFocusPolicy(QtCore.Qt.NoFocus)
         widgetList.show()
 

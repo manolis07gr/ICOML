@@ -1,11 +1,11 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import misc_parameters as mp
 
 
-class SetTimeInterval(QtGui.QPushButton):
+class SetTimeInterval(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'Time range')
+        QtWidgets.QPushButton.__init__(self, 'Time range')
         self.setStatusTip('Change the time window of the timeseries graph.')
 
         self.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -20,7 +20,7 @@ class SetTimeInterval(QtGui.QPushButton):
         except:
             pass
 
-        self.widgetList = QtGui.QListWidget(self.mainWidget)
+        self.widgetList = QtWidgets.QListWidget(self.mainWidget)
         widgetList = self.widgetList
         widgetList.setAlternatingRowColors(True)
 
@@ -31,10 +31,10 @@ class SetTimeInterval(QtGui.QPushButton):
         widgetList.addItem(mp.strThreeYears)
         widgetList.addItem(mp.strTenYears)
 
-        widgetList.setGeometry(QtGui.QWidget.geometry(self))
-        widgetList.setMinimumWidth(QtGui.QWidget.size(self).width())
+        widgetList.setGeometry(QtWidgets.QWidget.geometry(self))
+        widgetList.setMinimumWidth(QtWidgets.QWidget.size(self).width())
         widgetList.setMinimumHeight(120)
-        widgetList.move(QtGui.QWidget.pos(self).x(), QtGui.QWidget.pos(self).y() - 120)
+        widgetList.move(QtWidgets.QWidget.pos(self).x(), QtWidgets.QWidget.pos(self).y() - 120)
         widgetList.setFocusPolicy(QtCore.Qt.NoFocus)
         widgetList.show()
 

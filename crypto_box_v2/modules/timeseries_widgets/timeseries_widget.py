@@ -1,9 +1,9 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 
-class TimeseriesWidget(QtGui.QPushButton):
+class TimeseriesWidget(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'TimeSeries')
+        QtWidgets.QPushButton.__init__(self, 'TimeSeries')
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.mainWidget = mainWidget
         self.setDown(True)

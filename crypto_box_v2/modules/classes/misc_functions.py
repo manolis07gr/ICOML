@@ -1,10 +1,10 @@
-from PySide import QtGui
+from PyQt5 import QtWidgets
 import datetime as dt
 
 
 def centerWindow(widget):
     geomWindow = widget.frameGeometry()
-    centerScreen = QtGui.QDesktopWidget().availableGeometry().center()
+    centerScreen = QtWidgets.QDesktopWidget().availableGeometry().center()
     geomWindow.moveCenter(centerScreen)
     widget.move(geomWindow.bottomLeft())
 
@@ -36,7 +36,7 @@ def countLinesFile(nameFile):
 
 
 def errorMessage(string):
-    QtGui.QMessageBox.critical(None, 'Error!', string, QtGui.QMessageBox.Ok)
+    QtWidgets.QMessageBox.critical(None, 'Error!', string, QtWidgets.QMessageBox.Ok)
 
 
 def quitApp():

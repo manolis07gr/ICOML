@@ -1,9 +1,9 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 
-class SetClosePrice(QtGui.QCheckBox):
+class SetClosePrice(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Close')
+        QtWidgets.QCheckBox.__init__(self, 'Close')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the close prices.')
@@ -22,9 +22,9 @@ class SetClosePrice(QtGui.QCheckBox):
         self.mainWidget.updatePlots()
 
 
-class SetOpenClosePrice(QtGui.QCheckBox):
+class SetOpenClosePrice(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Op/Cl')
+        QtWidgets.QCheckBox.__init__(self, 'Op/Cl')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the open and close prices.')
@@ -40,9 +40,9 @@ class SetOpenClosePrice(QtGui.QCheckBox):
             self.mainWidget.timeseriesGraph.plotOpenClose = False
         self.mainWidget.updatePlots()
 
-class SetHighLowPrice(QtGui.QCheckBox):
+class SetHighLowPrice(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Hi/Lo')
+        QtWidgets.QCheckBox.__init__(self, 'Hi/Lo')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the high and low prices.')
@@ -56,9 +56,9 @@ class SetHighLowPrice(QtGui.QCheckBox):
             self.mainWidget.timeseriesGraph.plotHighLow = False
         self.mainWidget.updatePlots()
 
-class SetPercReturn(QtGui.QCheckBox):
+class SetPercReturn(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Ret %')
+        QtWidgets.QCheckBox.__init__(self, 'Ret %')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the returns in %.')
@@ -79,9 +79,9 @@ class SetPercReturn(QtGui.QCheckBox):
         self.mainWidget.updatePlots()
 
 
-class SetBPReturn(QtGui.QCheckBox):
+class SetBPReturn(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Ret bp')
+        QtWidgets.QCheckBox.__init__(self, 'Ret bp')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the returns in basis points')
@@ -100,9 +100,9 @@ class SetBPReturn(QtGui.QCheckBox):
         self.mainWidget.updatePlots()
 
 
-class SetNLogVol(QtGui.QCheckBox):
+class SetNLogVol(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Volume')
+        QtWidgets.QCheckBox.__init__(self, 'Volume')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the volume in number of shares/contracts.')
@@ -121,9 +121,9 @@ class SetNLogVol(QtGui.QCheckBox):
         self.mainWidget.updatePlots()
 
 
-class SetValueLogVol(QtGui.QCheckBox):
+class SetValueLogVol(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Value')
+        QtWidgets.QCheckBox.__init__(self, 'Value')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the value of the traded volume.')
@@ -140,9 +140,9 @@ class SetValueLogVol(QtGui.QCheckBox):
         self.mainWidget.updatePlots()
 
 
-class SetCounts(QtGui.QCheckBox):
+class SetCounts(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Counts')
+        QtWidgets.QCheckBox.__init__(self, 'Counts')
         self.mainWidget = mainWidget
 
         self.setCheckState(QtCore.Qt.Checked)
@@ -160,9 +160,9 @@ class SetCounts(QtGui.QCheckBox):
         self.mainWidget.updatePlots()
 
 
-class SetFrequency(QtGui.QCheckBox):
+class SetFrequency(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Freq/ncy')
+        QtWidgets.QCheckBox.__init__(self, 'Freq/ncy')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the frequency in the histogram.')
@@ -179,9 +179,9 @@ class SetFrequency(QtGui.QCheckBox):
         self.mainWidget.updatePlots()
 
 
-class Set1DolInvested(QtGui.QCheckBox):
+class Set1DolInvested(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'invest $1')
+        QtWidgets.QCheckBox.__init__(self, 'invest $1')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Divide the price with the value at the leftmost date, equivalent to a $1 investment.')
@@ -196,9 +196,9 @@ class Set1DolInvested(QtGui.QCheckBox):
         self.mainWidget.timeseriesGraph.plotPrices()
 
 
-class SetLogPrice(QtGui.QCheckBox):
+class SetLogPrice(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'log price')
+        QtWidgets.QCheckBox.__init__(self, 'log price')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Show the vertical axis in log scale.')

@@ -1,4 +1,4 @@
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.figure as mfg
 import matplotlib.dates as mdt
 import matplotlib.ticker as mt

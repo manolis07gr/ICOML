@@ -1,4 +1,4 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import read_file_widget as rfw
 import define_market_widget as dmw
@@ -20,12 +20,12 @@ import set_least_squares as sls
 import set_hist_properties as shp
 from misc_parameters import idButton1, idButton2, idButton3, idButton4
 
-class WidgetMain(QtGui.QWidget):
+class WidgetMain(QtWidgets.QWidget):
     
     def __init__(self):
-        QtGui.QWidget.__init__(self)
+        QtWidgets.QWidget.__init__(self)
 
-        self.grid = QtGui.QGridLayout()
+        self.grid = QtWidgets.QGridLayout()
 
         # WorkSpaces
         self.timeseriesWidget = tsw.TimeseriesWidget(self)
@@ -34,7 +34,7 @@ class WidgetMain(QtGui.QWidget):
         self.grid.addWidget(self.histogramWidget, 0, 6, 1, 6)
 
         # Define market
-        self.grid.addWidget(QtGui.QLabel("Index & Symbols:"), 0, 12, 1, 1)
+        self.grid.addWidget(QtWidgets.QLabel("Index & Symbols:"), 0, 12, 1, 1)
         self.defineMarket = dmw.ButtonDefineMarket(self)
         self.grid.addWidget(self.defineMarket, 1, 12, 1, 1)
 
@@ -178,7 +178,7 @@ class WidgetMain(QtGui.QWidget):
 
         self.statSymbol = []
         for i in range(0, 20):
-            self.statSymbol.append(QtGui.QLabel(""))
+            self.statSymbol.append(QtWidgets.QLabel(""))
             self.listHistogramWidgets.append(self.statSymbol[i])
             self.statSymbol[i].setStatusTip("Statistics for the total period of available data for the symbol")
 

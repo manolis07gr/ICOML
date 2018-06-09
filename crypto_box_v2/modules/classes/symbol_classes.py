@@ -1,4 +1,4 @@
-from PySide import QtGui
+from PyQt5 import QtWidgets
 import datetime as dt
 import numpy as np
 import pandas as pd
@@ -46,6 +46,8 @@ class Symbol(object):
 
     def populateFields(self, nLines):
         df = pd.read_csv(fp.dirSymbolData + self.name + '.csv')
+        for col in df.columns.tolist():
+            df.rename(columns={col: col.replace('*', '')}, inplace=True)
         df['Date'] = df['Date'].map(lambda x: dt.datetime.strptime(x, '%b %d, %Y').date())
         self.dDate.data = df['Date'].tolist()
         self.pOpen.data = df['Open'].tolist()
@@ -71,7 +73,7 @@ class Symbol(object):
             self.rClose[pc].data[i] = self.rClose[rt].data[i]*100.0
             self.rClose[bp].data[i] = self.rClose[rt].data[i]*10000.0
         for k in [td, fw, tm]:
-            QtGui.QApplication.processEvents()
+            QtWidgets.QApplication.processEvents()
             for i in range(0, nData):
                 if i < mDur[k]-1:
                     self.pClose.mAvg[k].data[i] = np.nan
@@ -103,7 +105,7 @@ class Symbol(object):
         self.histVaR5[bp].data[0] = sortReturns[int(0.05*nData)]*10000.0
         self.histVaR1[bp].data[0] = sortReturns[int(0.01*nData)]*10000.0
         for i in range(1, nData):
-            QtGui.QApplication.processEvents()
+            QtWidgets.QApplication.processEvents()
             sortReturns = np.empty_like(self.rClose[rt].data[nData-1:i-1:-1])
             np.copyto(sortReturns, self.rClose[rt].data[nData-1:i-1:-1])
             sortReturns.sort()

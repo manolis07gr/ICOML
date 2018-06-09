@@ -1,11 +1,11 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import misc_functions as mf
 
 
-class ProgressBar(QtGui.QProgressBar):
+class ProgressBar(QtWidgets.QProgressBar):
     def __init__(self, length):
-        QtGui.QProgressBar.__init__(self)
+        QtWidgets.QProgressBar.__init__(self)
         self.setWindowTitle('Downloading data...')
         self.setRange(0, length)
         self.setGeometry(0, 0, 500, 30)
@@ -13,13 +13,13 @@ class ProgressBar(QtGui.QProgressBar):
         self.iProgress = -1
         self.setValue(self.iProgress)
         self.show()
-        QtGui.QApplication.processEvents()
+        QtWidgets.QApplication.processEvents()
 
     def updateValue(self, string):
         self.iProgress += 1
         self.setValue(self.iProgress)
         self.setWindowTitle('Downloading data and calculating returns for ' + string + '...')
-        QtGui.QApplication.processEvents()
+        QtWidgets.QApplication.processEvents()
 
     def closeEvent(self, event):
         event.ignore()
