@@ -1,0 +1,6 @@
+dirSymbolData     = './symbol_data/'
+dirData           = './symbol_lists/'
+fileSymbolListAll = dirData + 'coins_all.csv'
+fileSymbolList    = dirData + 'symbol_list.txt'
+fileMarket        = dirData + 'market.txt'
+fileTrades        = dirData + 'trades.csv'
