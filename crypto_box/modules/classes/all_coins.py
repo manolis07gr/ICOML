@@ -32,5 +32,5 @@ class FullCoinList:
                         df.at[i_row, col] = td.text.strip().split('\n')[0]
 
             df.to_csv(fp.fileSymbolListAll, index=False)
-        finally:
+        except:
             pass

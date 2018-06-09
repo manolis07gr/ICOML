@@ -1,4 +1,4 @@
-from PySide import QtGui
+from PyQt5 import QtGui
 
 import style_parameters as sprm
 
@@ -49,7 +49,8 @@ def returnStyles():
         + sprm.colorCheck + ', stop: 1 ' + sprm.colorBackground + ');')
     strStyles.append(' width: 12px; height: 12px;')
     strStyles.append(' border: 1px solid ' + sprm.colorBorderWidget + ';')
-    strStyles.append(' border-radius: 5px;}')
+    strStyles.append(' border-radius: 5px;')
+    strStyles.append(' margin: 0px 3px 0px 3px;}')
     strStyles.append('QCheckBox:focus')
     strStyles.append('{outline: none;}')
 

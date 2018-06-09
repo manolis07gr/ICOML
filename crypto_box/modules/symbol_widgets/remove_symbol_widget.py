@@ -1,9 +1,9 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 
-class RemoveSymbol(QtGui.QPushButton):
+class RemoveSymbol(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'Rem Symbol')
+        QtWidgets.QPushButton.__init__(self, 'Rem Symbol')
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.mainWidget = mainWidget
 

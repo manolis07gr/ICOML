@@ -1,9 +1,9 @@
-from PySide import QtGui
+from PyQt5 import QtWidgets
 
 
-class SetMovAvg(QtGui.QCheckBox):
+class SetMovAvg(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Mov Avg')
+        QtWidgets.QCheckBox.__init__(self, 'Mov Avg')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show 10day moving averages.')
@@ -18,9 +18,9 @@ class SetMovAvg(QtGui.QCheckBox):
         self.mainWidget.timeseriesGraph.plotPrices()
 
 
-class SetMovStd(QtGui.QCheckBox):
+class SetMovStd(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Mov Std')
+        QtWidgets.QCheckBox.__init__(self, 'Mov Std')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Check the box to show the range of +/-1 10day moving standard deviation.')

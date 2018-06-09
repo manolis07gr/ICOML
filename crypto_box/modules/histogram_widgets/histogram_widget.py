@@ -1,9 +1,9 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 
-class HistogramWidget(QtGui.QPushButton):
+class HistogramWidget(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'Correlation && Histograms')
+        QtWidgets.QPushButton.__init__(self, 'Correlation && Histograms')
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.mainWidget = mainWidget
 

@@ -1,11 +1,11 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import symbol_list_class as slc
 
 
-class AddSymbol(QtGui.QPushButton):
+class AddSymbol(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'Add Symbol')
+        QtWidgets.QPushButton.__init__(self, 'Add Symbol')
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.mainWidget = mainWidget
 

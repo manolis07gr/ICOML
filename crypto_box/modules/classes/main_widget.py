@@ -1,4 +1,4 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import read_file_widget as rfw
 import define_market_widget as dmw
@@ -20,12 +20,12 @@ import set_least_squares as sls
 import set_hist_properties as shp
 from misc_parameters import idButton1, idButton2, idButton3, idButton4
 
-class WidgetMain(QtGui.QWidget):
+class WidgetMain(QtWidgets.QWidget):
     
     def __init__(self):
-        QtGui.QWidget.__init__(self)
+        QtWidgets.QWidget.__init__(self)
 
-        self.grid = QtGui.QGridLayout()
+        self.grid = QtWidgets.QGridLayout()
 
         # WorkSpaces
         self.timeseriesWidget = tsw.TimeseriesWidget(self)
@@ -34,7 +34,7 @@ class WidgetMain(QtGui.QWidget):
         self.grid.addWidget(self.histogramWidget, 0, 6, 1, 6)
 
         # Define market
-        self.grid.addWidget(QtGui.QLabel("Index & Symbols:"), 0, 12, 1, 1)
+        self.grid.addWidget(QtWidgets.QLabel("Index & Symbols:"), 0, 12, 1, 1)
         self.defineMarket = dmw.ButtonDefineMarket(self)
         self.grid.addWidget(self.defineMarket, 1, 12, 1, 1)
 
@@ -110,17 +110,17 @@ class WidgetMain(QtGui.QWidget):
         self.setClosePrice = su.SetClosePrice(self)
         self.listTimeseriesWidgets.append(self.setClosePrice)
         self.grid.addWidget(self.setClosePrice, 10, 6, 1, 1)
-        self.setAdjustedPrice = su.SetAdjustedPrice(self)
-        self.listTimeseriesWidgets.append(self.setAdjustedPrice)
-        self.grid.addWidget(self.setAdjustedPrice, 10, 7, 1, 1)
+        self.setOpenClosePrice = su.SetOpenClosePrice(self)
+        self.listTimeseriesWidgets.append(self.setOpenClosePrice)
+        self.grid.addWidget(self.setOpenClosePrice, 10, 7, 1, 1)
 
-        self.setPercReturn = su.SetPercReturn(self)
-        self.listTimeseriesWidgets.append(self.setPercReturn)
-        self.grid.addWidget(self.setPercReturn, 10, 8, 1, 1)
-        self.setBPReturn = su.SetBPReturn(self)
-        self.listTimeseriesWidgets.append(self.setBPReturn)
-        self.grid.addWidget(self.setBPReturn, 10, 9, 1, 1)
+        self.setHighLowPrice = su.SetHighLowPrice(self)
+        self.listTimeseriesWidgets.append(self.setHighLowPrice)
+        self.grid.addWidget(self.setHighLowPrice, 10, 8, 1, 1)
 
+        self.setLogPrice = su.SetLogPrice(self)
+        self.listTimeseriesWidgets.append(self.setLogPrice)
+        self.grid.addWidget(self.setLogPrice, 10, 9, 1, 1)
         self.setNLogVol = su.SetNLogVol(self)
         self.listTimeseriesWidgets.append(self.setNLogVol)
         self.grid.addWidget(self.setNLogVol, 10, 10, 1, 1)
@@ -141,8 +141,6 @@ class WidgetMain(QtGui.QWidget):
             self.listHistogramWidgets.append(thisWidget)
         self.listHistogramWidgets.append(self.setTimeInterval)
         self.listHistogramWidgets.append(self.setRInterval)
-        self.listHistogramWidgets.append(self.setPercReturn)
-        self.listHistogramWidgets.append(self.setBPReturn)
 
         self.setLeastSquaresLine = sls.SetLeastSquaresLine(self)
         self.listHistogramWidgets.append(self.setLeastSquaresLine)
@@ -164,6 +162,13 @@ class WidgetMain(QtGui.QWidget):
         self.listHistogramWidgets.append(self.setColorVaR)
         self.grid.addWidget(self.setColorVaR, 10, 7, 1, 1)
 
+        self.setPercReturn = su.SetPercReturn(self)
+        self.listHistogramWidgets.append(self.setPercReturn)
+        self.grid.addWidget(self.setPercReturn, 10, 8, 1, 1)
+        self.setBPReturn = su.SetBPReturn(self)
+        self.listHistogramWidgets.append(self.setBPReturn)
+        self.grid.addWidget(self.setBPReturn, 10, 9, 1, 1)
+
         self.setCounts = su.SetCounts(self)
         self.listHistogramWidgets.append(self.setCounts)
         self.grid.addWidget(self.setCounts, 10, 10, 1, 1)
@@ -173,7 +178,7 @@ class WidgetMain(QtGui.QWidget):
 
         self.statSymbol = []
         for i in range(0, 20):
-            self.statSymbol.append(QtGui.QLabel(""))
+            self.statSymbol.append(QtWidgets.QLabel(""))
             self.listHistogramWidgets.append(self.statSymbol[i])
             self.statSymbol[i].setStatusTip("Statistics for the total period of available data for the symbol")
 

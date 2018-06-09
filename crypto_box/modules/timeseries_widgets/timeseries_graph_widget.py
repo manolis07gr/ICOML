@@ -1,4 +1,4 @@
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.figure as mfg
 import matplotlib.dates as mdt
 import matplotlib.ticker as mt
@@ -30,13 +30,15 @@ class TimeseriesGraph(FigureCanvas):
         self.tMax = mf.findLastWeekday(mp.today)
         self.dTimeInterval = mp.threeMonths
         self.tMin = mf.findLastWeekday(self.tMax - self.dTimeInterval)
-        self.rInterval = mp.fivePc
-        self.rMax = 2.0
+        self.rInterval = mp.twentyFivePc
+        self.rMax = self.rInterval
         self.plotMovAvg = False
         self.plotMovStd = False
         self.movInterval = 0
-        self.plotPAClose = True
-        self.plotRPerc = True
+        self.plotClose = True
+        self.plotOpenClose = False
+        self.plotHighLow = False
+        self.plotLogPrice = False
         self.plotNLogVol = True
         self.plot1dolInv = False
 
@@ -51,39 +53,38 @@ class TimeseriesGraph(FigureCanvas):
         isNone = 0
         k = self.movInterval
         for thisSymbol, thisColorLine in zip(self.mainWidget.symbolWidget, sp.colorLine):
-            if thisSymbol.activeSymbol is not None:
+            if thisSymbol.activeSymbol is not None and (self.plotClose or self.plotOpenClose or self.plotHighLow):
                 s = thisSymbol.activeSymbol
                 iTMin, iTMax = self.getTMinTmax(s)
-                if self.plotPAClose is True:
-                    pData = s.pAClose.data
-                    pMAvg = s.pAClose.mAvg[k].data
-                    pMStd = s.pAClose.mStd[k].data
-                    labelPrice = s.pAClose.name + ' [' + s.pAClose.unit + ']'
+                if self.plotOpenClose is True:
+                    pData = s.pClose.data
+                    pData2 = s.pOpen.data
+                    labelPrice = s.pOpen.name + ' & ' + s.pClose.name  + ' [' + s.pClose.unit + ']'
                     if self.plot1dolInv is True:
-                        pData = np.divide(s.pAClose.data, s.pAClose.data[iTMin])
-                        pMAvg = np.divide(s.pAClose.mAvg[k].data, s.pAClose.data[iTMin])
-                        pMStd = np.divide(s.pAClose.mStd[k].data, s.pAClose.data[iTMin])
-                        labelPrice = s.pAClose.name + ' (normalized)'
+                        pData = np.divide(s.pOpen.data, s.pClose.data[iTMin])
+                        pData2 = np.divide(s.pClose.data, s.pClose.data[iTMin])
+                        labelPrice = s.pOpen.name + ' & ' + s.pClose.name + ' (normalized)'
                 else:
                     pData = s.pClose.data
-                    pMAvg = s.pClose.mAvg[k].data
-                    pMStd = s.pClose.mStd[k].data
                     labelPrice = s.pClose.name + ' [' + s.pClose.unit + ']'
                     if self.plot1dolInv is True:
                         pData = np.divide(s.pClose.data, s.pClose.data[iTMin])
-                        pMAvg = np.divide(s.pClose.mAvg[k].data, s.pClose.data[iTMin])
-                        pMStd = np.divide(s.pClose.mStd[k].data, s.pClose.data[iTMin])
                         labelPrice = s.pClose.name + ' (normalized)'
-                if self.plotRPerc is True:
-                    rData = s.rAClose[pc].data
-                    rMAvg = s.rAClose[pc].mAvg[k].data
-                    rMStd = s.rAClose[pc].mStd[k].data
-                    labelReturn = 'Return [' + s.rAClose[pc].unit + ']'
-                else:
-                    rData = s.rAClose[bp].data
-                    rMAvg = s.rAClose[bp].mAvg[k].data
-                    rMStd = s.rAClose[bp].mStd[k].data
-                    labelReturn = 'Return [' + s.rAClose[bp].unit + ']'
+                if self.plotHighLow is True:
+                    pData3 = s.pHigh.data
+                    pData4 = s.pLow.data
+                    if self.plot1dolInv is True:
+                        pData3 = np.divide(s.pHigh.data, s.pClose.data[iTMin])
+                        pData4 = np.divide(s.pLow.data, s.pClose.data[iTMin])
+                pMAvg = s.pClose.mAvg[k].data
+                pMStd = s.pClose.mStd[k].data
+                if self.plot1dolInv is True:
+                    pMAvg = np.divide(s.pClose.mAvg[k].data, s.pClose.data[iTMin])
+                    pMStd = np.divide(s.pClose.mStd[k].data, s.pClose.data[iTMin])
+                rData = s.rClose[pc].data
+                rMAvg = s.rClose[pc].mAvg[k].data
+                rMStd = s.rClose[pc].mStd[k].data
+                labelReturn = 'Return [' + s.rClose[pc].unit + ']'
                 if self.plotNLogVol is True:
                     vData = s.nLogVol.data
                     labelVolume = 'Vol [' + s.nLogVol.unit + ']'
@@ -91,24 +92,28 @@ class TimeseriesGraph(FigureCanvas):
                     vData = s.vLogVol.data
                     labelVolume = 'Vol [' + s.vLogVol.unit + ']'
 
-                if self.plotMovAvg is False:
-                    self.axPrice.plot(s.dDate.data, pData, linestyle = '-', color = thisColorLine, linewidth = 1.0, zorder = 10)
-                    self.axReturn.plot(s.dDate.data, rData, marker = '.', linestyle = '-', color = thisColorLine, markersize = 4, linewidth = 0.3, zorder = 10)
-                else:
-                    self.axPrice.plot(s.dDate.data, pData, linestyle = '-', color = thisColorLine, linewidth = 1.0, alpha = 0.5, zorder = 10)
-                    self.axReturn.plot(s.dDate.data, rData, marker = '.', linestyle = '-', color = thisColorLine, markersize = 4, linewidth = 0.3, alpha = 0.5, zorder = 10)
-                    self.axPrice.plot(s.dDate.data, pMAvg, linestyle = '-', color = thisColorLine, linewidth = 2.0, zorder = 10)
-                    self.axReturn.plot(s.dDate.data, rMAvg, linestyle = '-', color = thisColorLine, linewidth = 2.0, zorder = 10)
+                if self.plotClose is True:
+                    self.axPrice.plot(s.dDate.data, pData, linestyle='-', color=thisColorLine, linewidth=1.0, zorder=10)
+                if self.plotOpenClose is True:
+                    self.axPrice.plot(s.dDate.data, pData, linestyle='-', color=thisColorLine, linewidth=1.0, zorder=10)
+                    self.axPrice.plot(s.dDate.data, pData2, linestyle='--', color=thisColorLine, linewidth=1.0, zorder=10)
+                if self.plotHighLow is True:
+                    self.axPrice.plot(s.dDate.data, pData3, linestyle=':', color=thisColorLine, linewidth=1.0, zorder=10)
+                    self.axPrice.plot(s.dDate.data, pData4, linestyle=':', color=thisColorLine, linewidth=1.0, zorder=10)
+                if self.plotMovAvg is True:
+                    self.axPrice.plot(s.dDate.data, pMAvg, linestyle='-', color=thisColorLine, linewidth=2.0, zorder = 10)
+                    self.axReturn.plot(s.dDate.data, rMAvg, linestyle='-', color=thisColorLine, linewidth=2.0, zorder = 10)
                 if self.plotMovStd is True:
                     self.axPrice.fill_between(s.dDate.data, np.subtract(pMAvg, pMStd), np.add(pMAvg, pMStd), color = thisColorLine, alpha = 0.2, zorder = 10)
                     self.axReturn.fill_between(s.dDate.data, np.subtract(rMAvg, rMStd), np.add(rMAvg, rMStd), color = thisColorLine, alpha = 0.2, zorder = 10)
+                self.axReturn.plot(s.dDate.data, rData, marker='.', linestyle='-', color=thisColorLine, markersize=4, linewidth=0.3, zorder=10)
                 self.axVolume.fill_between(s.dDate.data, 1.0, vData, color = thisColorLine, alpha = 0.3, zorder = 10)
 
+                if self.plotLogPrice is True:
+                    self.axPrice.set_yscale('log')
                 self.axPrice.set_ylabel(labelPrice)
                 self.axReturn.set_ylabel(labelReturn)
                 self.axVolume.set_ylabel(labelVolume)
-
-
             else:
                 isNone += 1
 
@@ -127,10 +132,10 @@ class TimeseriesGraph(FigureCanvas):
             if thisSymbol.activeSymbol is not None:
                 s = thisSymbol.activeSymbol
                 iTMin, iTMax = self.getTMinTmax(s)
-                if self.plotPAClose is True:
-                    pData = s.pAClose.data
+                if self.plotClose is True:
+                    pData = s.pClose.data
                     if self.plot1dolInv is True:
-                        pData = np.divide(s.pAClose.data, s.pAClose.data[iTMin])
+                        pData = np.divide(s.pClose.data, s.pClose.data[iTMin])
                 else:
                     pData = s.pClose.data
                     if self.plot1dolInv is True:
@@ -145,12 +150,8 @@ class TimeseriesGraph(FigureCanvas):
                 vMin = min(vMin, np.nanmin(vData[iTMin:iTMax]))
                 vMax = max(vMax, np.nanmax(vData[iTMin:iTMax]))
                 self.axPrice.set_ylim([0.95*pMin, 1.05*pMax])
-                if self.plotRPerc is True:
-                    rMin = -self.rMax
-                    rMax = self.rMax
-                else:
-                    rMin = -100.0*self.rMax
-                    rMax = 100.0*self.rMax
+                rMin = -self.rMax
+                rMax = self.rMax
                 self.axReturn.set_ylim([rMin, rMax])
                 self.axVolume.set_ylim([0.95*vMin, 1.05*vMax])
         self.axPrice.set_xticklabels('')
@@ -182,7 +183,12 @@ class TimeseriesGraph(FigureCanvas):
             yTickLabels = thisAx.get_yticks()
             yTickLabelsNew = []
             for label in yTickLabels:
-                yTickLabelsNew.append(str(label))
+                if abs(label) > 100.0:
+                    yTickLabelsNew.append('{0:1.0f}'.format(label))
+                elif abs(label) < 1.0:
+                    yTickLabelsNew.append('{0:1.2f}'.format(label))
+                else:
+                    yTickLabelsNew.append('{0:1.1f}'.format(label))
             yTickLabelsNew[0] = ''
             yTickLabelsNew[-1] = ''
             thisAx.set_yticklabels(yTickLabelsNew)

@@ -1,9 +1,9 @@
-from PySide import QtGui
+from PyQt5 import QtWidgets
 
 
-class GetSymbol(QtGui.QLineEdit):
+class GetSymbol(QtWidgets.QLineEdit):
     def __init__(self, mainWidget):
-        QtGui.QLineEdit.__init__(self)
+        QtWidgets.QLineEdit.__init__(self)
         self.mainWidget = mainWidget
 
         self.setStatusTip('Enter symbol here and press enter to add it in the list.')

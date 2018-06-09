@@ -1,3 +1,4 @@
+BTC
 ETH
 XRP
 BCH

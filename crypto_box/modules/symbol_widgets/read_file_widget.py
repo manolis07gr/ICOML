@@ -1,12 +1,12 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import file_parameters as fp
 import symbol_list_class as slc
 
 
-class ButtonReadFile(QtGui.QPushButton):
+class ButtonReadFile(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, 'Load symbols')
+        QtWidgets.QPushButton.__init__(self, 'Load symbols')
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.mainWidget = mainWidget
 

@@ -1,4 +1,4 @@
-from PySide import QtGui
+from PyQt5 import QtWidgets
 import datetime as dt
 import numpy as np
 import pandas as pd
@@ -22,17 +22,16 @@ class Symbol(object):
         nLines = mf.countLinesFile(fp.dirSymbolData + name + '.csv')
 
         self.dDate       = SymbolVariable(nLines, 'Date', 'Python format', date = True)
-        self.pOpen       = SymbolVariable(nLines, 'Open price', '$')
-        self.pHigh       = SymbolVariable(nLines, 'High price', '$')
-        self.pLow        = SymbolVariable(nLines, 'Low price', '$')
+        self.pClose      = SymbolVariable(nLines, 'Close price', '\$', movAvg=True)
+        self.pOpen       = SymbolVariable(nLines, 'Open price', '\$')
+        self.pHigh       = SymbolVariable(nLines, 'High price', '\$')
+        self.pLow        = SymbolVariable(nLines, 'Low price', '\$')
         self.nLogVol     = SymbolVariable(nLines, 'Logarithm of traded volume', 'log(#)')
-        self.vLogVol     = SymbolVariable(nLines, 'Logarithm of traded volume', 'log($)')
-        self.pClose      = SymbolVariable(nLines, 'Close price', '$', movAvg = True)
-        self.pAClose     = SymbolVariable(nLines, 'Adjusted close price', '$', movAvg = True)
-        self.rAClose     = []
-        self.rAClose.append(SymbolVariable(nLines, 'Return of adjusted close price', 'rate', movAvg = True))
-        self.rAClose.append(SymbolVariable(nLines, 'Return of adjusted close price', '%', movAvg = True))
-        self.rAClose.append(SymbolVariable(nLines, 'Return of adjusted close price', 'bp', movAvg = True))
+        self.vLogVol     = SymbolVariable(nLines, 'Logarithm of traded volume', 'log(\$)')
+        self.rClose      = []
+        self.rClose.append(SymbolVariable(nLines, 'Return of close price', 'rate', movAvg = True))
+        self.rClose.append(SymbolVariable(nLines, 'Return of close price', '%', movAvg = True))
+        self.rClose.append(SymbolVariable(nLines, 'Return of close price', 'bp', movAvg = True))
         self.histVaR1    = []
         self.histVaR1.append(SymbolVariable(nLines, 'Historical value at risk 1%', 'rate'))
         self.histVaR1.append(SymbolVariable(nLines, 'Historical value at risk 1%', '%'))
@@ -47,6 +46,8 @@ class Symbol(object):
 
     def populateFields(self, nLines):
         df = pd.read_csv(fp.dirSymbolData + self.name + '.csv')
+        for col in df.columns.tolist():
+            df.rename(columns={col: col.replace('*', '')}, inplace=True)
         df['Date'] = df['Date'].map(lambda x: dt.datetime.strptime(x, '%b %d, %Y').date())
         self.dDate.data = df['Date'].tolist()
         self.pOpen.data = df['Open'].tolist()
@@ -54,7 +55,6 @@ class Symbol(object):
         self.pLow.data = df['Low'].tolist()
         self.pClose.data = df['Close'].tolist()
         self.nLogVol.data = df['Volume'].map(lambda x: np.log10(int(x.replace(',', '').replace('-', '1')))).tolist()
-        self.pAClose.data = self.pClose.data[:]
 
         self.dDate.data   = self.dDate.data[::-1]
         self.pOpen.data   = self.pOpen.data[::-1]
@@ -62,42 +62,41 @@ class Symbol(object):
         self.pLow.data    = self.pLow.data[::-1]
         self.pClose.data  = self.pClose.data[::-1]
         self.nLogVol.data = self.nLogVol.data[::-1]
-        self.pAClose.data = self.pAClose.data[::-1]
         self.vLogVol.data = np.add(np.log10(self.pClose.data), self.nLogVol.data)
 
     def calculateReturnMAvgVaR(self):
         for j in [rt, pc, bp]:
-            self.rAClose[j].data[0] = 0.0
-        nData = len(self.pAClose.data)
+            self.rClose[j].data[0] = 0.0
+        nData = len(self.pClose.data)
         for i in range(1, nData):
-            self.rAClose[rt].data[i] = (self.pAClose.data[i] - self.pAClose.data[i-1]) / self.pAClose.data[i-1]
-            self.rAClose[pc].data[i] = self.rAClose[rt].data[i]*100.0
-            self.rAClose[bp].data[i] = self.rAClose[rt].data[i]*10000.0
+            self.rClose[rt].data[i] = (self.pClose.data[i] - self.pClose.data[i-1]) / self.pClose.data[i-1]
+            self.rClose[pc].data[i] = self.rClose[rt].data[i]*100.0
+            self.rClose[bp].data[i] = self.rClose[rt].data[i]*10000.0
         for k in [td, fw, tm]:
-            QtGui.QApplication.processEvents()
+            QtWidgets.QApplication.processEvents()
             for i in range(0, nData):
                 if i < mDur[k]-1:
                     self.pClose.mAvg[k].data[i] = np.nan
                     self.pClose.mStd[k].data[i] = np.nan
-                    self.pAClose.mAvg[k].data[i] = np.nan
-                    self.pAClose.mStd[k].data[i] = np.nan
+                    self.pClose.mAvg[k].data[i] = np.nan
+                    self.pClose.mStd[k].data[i] = np.nan
                     for j in [rt, pc, bp]:
-                        self.rAClose[j].mAvg[k].data[i] = np.nan
-                        self.rAClose[j].mStd[k].data[i] = np.nan
+                        self.rClose[j].mAvg[k].data[i] = np.nan
+                        self.rClose[j].mStd[k].data[i] = np.nan
                 else:
                     self.pClose.mAvg[k].data[i] = np.mean(self.pClose.data[i-mDur[k]+1:i+1])
                     self.pClose.mStd[k].data[i] = np.std(self.pClose.data[i-mDur[k]+1:i+1])
-                    self.pAClose.mAvg[k].data[i] = np.mean(self.pAClose.data[i-mDur[k]+1:i+1])
-                    self.pAClose.mStd[k].data[i] = np.std(self.pAClose.data[i-mDur[k]+1:i+1])
-                    self.rAClose[rt].mAvg[k].data[i] = np.mean(self.rAClose[rt].data[i-mDur[k]+1:i+1])
-                    self.rAClose[rt].mStd[k].data[i] = np.std(self.rAClose[rt].data[i-mDur[k]+1:i+1])
-                    self.rAClose[pc].mAvg[k].data[i] = self.rAClose[rt].mAvg[k].data[i]*100.0
-                    self.rAClose[pc].mStd[k].data[i] = self.rAClose[rt].mStd[k].data[i]*100.0
-                    self.rAClose[bp].mAvg[k].data[i] = self.rAClose[rt].mAvg[k].data[i]*10000.0
-                    self.rAClose[bp].mStd[k].data[i] = self.rAClose[rt].mStd[k].data[i]*10000.0
+                    self.pClose.mAvg[k].data[i] = np.mean(self.pClose.data[i-mDur[k]+1:i+1])
+                    self.pClose.mStd[k].data[i] = np.std(self.pClose.data[i-mDur[k]+1:i+1])
+                    self.rClose[rt].mAvg[k].data[i] = np.mean(self.rClose[rt].data[i-mDur[k]+1:i+1])
+                    self.rClose[rt].mStd[k].data[i] = np.std(self.rClose[rt].data[i-mDur[k]+1:i+1])
+                    self.rClose[pc].mAvg[k].data[i] = self.rClose[rt].mAvg[k].data[i]*100.0
+                    self.rClose[pc].mStd[k].data[i] = self.rClose[rt].mStd[k].data[i]*100.0
+                    self.rClose[bp].mAvg[k].data[i] = self.rClose[rt].mAvg[k].data[i]*10000.0
+                    self.rClose[bp].mStd[k].data[i] = self.rClose[rt].mStd[k].data[i]*10000.0
 
-        sortReturns = np.empty_like(self.rAClose[rt].data)
-        np.copyto(sortReturns, self.rAClose[rt].data)
+        sortReturns = np.empty_like(self.rClose[rt].data)
+        np.copyto(sortReturns, self.rClose[rt].data)
         sortReturns.sort()
         self.histVaR5[rt].data[0] = sortReturns[int(0.05*nData)]
         self.histVaR1[rt].data[0] = sortReturns[int(0.01*nData)]
@@ -106,9 +105,9 @@ class Symbol(object):
         self.histVaR5[bp].data[0] = sortReturns[int(0.05*nData)]*10000.0
         self.histVaR1[bp].data[0] = sortReturns[int(0.01*nData)]*10000.0
         for i in range(1, nData):
-            QtGui.QApplication.processEvents()
-            sortReturns = np.empty_like(self.rAClose[rt].data[nData-1:i-1:-1])
-            np.copyto(sortReturns, self.rAClose[rt].data[nData-1:i-1:-1])
+            QtWidgets.QApplication.processEvents()
+            sortReturns = np.empty_like(self.rClose[rt].data[nData-1:i-1:-1])
+            np.copyto(sortReturns, self.rClose[rt].data[nData-1:i-1:-1])
             sortReturns.sort()
             nRet = len(sortReturns)
             self.histVaR5[rt].data[i] = sortReturns[int(0.05*nRet)]

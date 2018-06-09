@@ -1,13 +1,13 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 import numpy as np
 
 import style_parameters as sp
 from misc_parameters import pc
 
 
-class SetSymbol(QtGui.QPushButton):
+class SetSymbol(QtWidgets.QPushButton):
     def __init__(self, mainWidget, idColor):
-        QtGui.QPushButton.__init__(self, 'Set symbol')
+        QtWidgets.QPushButton.__init__(self, 'Set symbol')
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.mainWidget = mainWidget
         self.idColor = idColor
@@ -25,7 +25,7 @@ class SetSymbol(QtGui.QPushButton):
             self.widgetList.close()
         except:
             pass
-        self.widgetList = QtGui.QListWidget(self.mainWidget)
+        self.widgetList = QtWidgets.QListWidget(self.mainWidget)
         widgetList = self.widgetList
         widgetList.setAlternatingRowColors(True)
 
@@ -34,14 +34,19 @@ class SetSymbol(QtGui.QPushButton):
         for thisSymbol in self.mainWidget.symbolList:
             widgetList.addItem(thisSymbol.name + ' (' + thisSymbol.description + ')')
             self.activeSymbolList.append(thisSymbol)
+        activesymbolNameList = []
+        for thisActiveSymbol in self.activeSymbolList:
+            if thisActiveSymbol is not None:
+                activesymbolNameList.append(thisActiveSymbol.name)
         for thisMarket in self.mainWidget.marketList:
-            widgetList.addItem(thisMarket.name + ' (' + thisMarket.description + ')')
-            self.activeSymbolList.append(thisMarket)
+            if thisMarket.name not in activesymbolNameList:
+                widgetList.addItem(thisMarket.name + ' (' + thisMarket.description + ')')
+                self.activeSymbolList.append(thisMarket)
 
-        widgetList.setGeometry(QtGui.QWidget.geometry(self))
-        widgetList.setMinimumWidth(QtGui.QWidget.size(self).width())
+        widgetList.setGeometry(QtWidgets.QWidget.geometry(self))
+        widgetList.setMinimumWidth(QtWidgets.QWidget.size(self).width())
         widgetList.setMinimumHeight(400)
-        widgetList.move(QtGui.QWidget.pos(self).x(), QtGui.QWidget.pos(self).y() - 400)
+        widgetList.move(QtWidgets.QWidget.pos(self).x(), QtWidgets.QWidget.pos(self).y() - 400)
         widgetList.setFocusPolicy(QtCore.Qt.NoFocus)
         if len(self.mainWidget.symbolList) != 0:
             widgetList.show()

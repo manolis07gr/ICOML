@@ -1,11 +1,11 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 import misc_parameters as mp
 
 
-class SetNBins(QtGui.QPushButton):
+class SetNBins(QtWidgets.QPushButton):
     def __init__(self, mainWidget):
-        QtGui.QPushButton.__init__(self, '# of bins')
+        QtWidgets.QPushButton.__init__(self, '# of bins')
         self.setStatusTip('Set the number of bins for the histogram')
 
         self.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -20,7 +20,7 @@ class SetNBins(QtGui.QPushButton):
         except:
             pass
 
-        self.widgetList = QtGui.QListWidget(self.mainWidget)
+        self.widgetList = QtWidgets.QListWidget(self.mainWidget)
         widgetList = self.widgetList
         widgetList.setAlternatingRowColors(True)
 
@@ -28,10 +28,10 @@ class SetNBins(QtGui.QPushButton):
         widgetList.addItem(mp.strThirty)
         widgetList.addItem(mp.strFifty)
 
-        widgetList.setGeometry(QtGui.QWidget.geometry(self))
-        widgetList.setMinimumWidth(QtGui.QWidget.size(self).width())
+        widgetList.setGeometry(QtWidgets.QWidget.geometry(self))
+        widgetList.setMinimumWidth(QtWidgets.QWidget.size(self).width())
         widgetList.setMinimumHeight(60)
-        widgetList.move(QtGui.QWidget.pos(self).x(), QtGui.QWidget.pos(self).y() - 60)
+        widgetList.move(QtWidgets.QWidget.pos(self).x(), QtWidgets.QWidget.pos(self).y() - 60)
         widgetList.setFocusPolicy(QtCore.Qt.NoFocus)
         widgetList.show()
 
@@ -52,9 +52,9 @@ class SetNBins(QtGui.QPushButton):
         self.mainWidget.histogramGraph.plotStatistics()
 
 
-class SetLineHistogram(QtGui.QCheckBox):
+class SetLineHistogram(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Line hist')
+        QtWidgets.QCheckBox.__init__(self, 'Line hist')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Plot a line on top of the histogram to highlight the distribution')
@@ -69,9 +69,9 @@ class SetLineHistogram(QtGui.QCheckBox):
         self.mainWidget.histogramGraph.plotStatistics()
 
 
-class SetLogHistogram(QtGui.QCheckBox):
+class SetLogHistogram(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'Log hist')
+        QtWidgets.QCheckBox.__init__(self, 'Log hist')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Show the vertical axis of the histogram in log scale')
@@ -86,9 +86,9 @@ class SetLogHistogram(QtGui.QCheckBox):
         self.mainWidget.histogramGraph.plotStatistics()
 
 
-class SetColorVaR(QtGui.QCheckBox):
+class SetColorVaR(QtWidgets.QCheckBox):
     def __init__(self, mainWidget):
-        QtGui.QCheckBox.__init__(self, 'color VaR')
+        QtWidgets.QCheckBox.__init__(self, 'color VaR')
         self.mainWidget = mainWidget
 
         self.setStatusTip('Color with light red the 5% historical VaR and with dark red the 1% historical VaR')

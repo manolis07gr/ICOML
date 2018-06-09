@@ -1,4 +1,4 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtCore
 
 import misc_functions as mf
 import symbol_classes as sc

@@ -1,9 +1,9 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore
 
 
-class ListSymbols(QtGui.QListWidget):
+class ListSymbols(QtWidgets.QListWidget):
     def __init__(self, mainWidget):
-        QtGui.QListWidget.__init__(self, mainWidget)
+        QtWidgets.QListWidget.__init__(self, mainWidget)
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.setAlternatingRowColors(True)
 

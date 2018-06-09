@@ -1,4 +1,4 @@
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.figure as mfg
 import scipy.stats as ss
 import matplotlib.pylab as plb
@@ -30,7 +30,7 @@ class HistogramGraph(FigureCanvas):
         self.plotLeastSquaresLine = False
         self.plotStdLine = False
         self.plotRPerc = True
-        self.rMax = 2.0
+        self.rMax = 5.0
         self.plotCounts = True
         self.nBins = 20
         self.plotLog = False
@@ -50,7 +50,6 @@ class HistogramGraph(FigureCanvas):
                 s = thisSymbol.activeSymbol
                 m = self.mainWidget.defineMarket.activeMarket
                 rSymbol, rMarket, HVaR5, HVaR1 = self.getCommonRange(s, m)
- 
                 self.axScatter.plot(rMarket, rSymbol, '.', color = thisColorLine, markersize = 3, alpha = 0.5, zorder = 10)
                 if self.plotRPerc is True:
                     rMin = -self.rMax
@@ -70,13 +69,13 @@ class HistogramGraph(FigureCanvas):
 
                 nData = len(rSymbol)
                 iID = sp.colorLine.index(thisColorLine)
-                self.mainWidget.statSymbol[5*iID].setText('Avg: ' + rFormat % np.mean(rSymbol) + rSym + \
-                                                        '\tMdn: ' + rFormat % np.median(rSymbol) + rSym)
-                self.mainWidget.statSymbol[5*iID+1].setText('St dev: ' + rFormat % (np.std(rSymbol)*np.sqrt(nData)/np.sqrt(nData-1)) + rSym + \
-                                                          '\tSt err: ' + rFormat % (np.std(rSymbol)/np.sqrt(nData)) + rSym)
+                self.mainWidget.statSymbol[5*iID].setText('Day avg: ' + rFormat % np.mean(rSymbol) + rSym + \
+                                                        '\tAnn avg: ' + rFormat % (np.mean(rSymbol)*260.0) + rSym)
+                self.mainWidget.statSymbol[5*iID+1].setText('Day std: ' + rFormat % np.std(rSymbol) + rSym + \
+                                                          '\tAnn std: ' + rFormat % (np.std(rSymbol)*np.sqrt(260.0)) + rSym)
                 self.mainWidget.statSymbol[5*iID+2].setText('Max: ' + rFormat % max(rSymbol) + rSym + \
                                                           '\tMin: ' + rFormat % min(rSymbol) + rSym)
-                self.mainWidget.statSymbol[5*iID+4].setText('HVaR5%: ' + rFormat % HVaR5[0] + rSym + \
+                self.mainWidget.statSymbol[5*iID+4].setText('Sharpe: ' + rFormat % (np.mean(rSymbol)*np.sqrt(260.0)/np.std(rSymbol)) + \
                                                           '\tHVaR1%: ' + rFormat % HVaR1[0] + rSym)
                 beta, alpha, r_value, p_value, std_err = ss.linregress(rMarket, rSymbol)
                 rEstimate = plb.poly1d([beta, alpha])
@@ -178,13 +177,13 @@ class HistogramGraph(FigureCanvas):
                     dateSymbol = symbol.dDate.data[iDateSymbol]
                     iDateMarket = market.dDate.data.index(dateSymbol)
                     if self.plotRPerc is True:
-                        rSymbol.append(symbol.rAClose[pc].data[iDateSymbol])
-                        rMarket.append(market.rAClose[pc].data[iDateMarket])
+                        rSymbol.append(symbol.rClose[pc].data[iDateSymbol])
+                        rMarket.append(market.rClose[pc].data[iDateMarket])
                         HVaR5.append(symbol.histVaR5[pc].data[iDateSymbol])
                         HVaR1.append(symbol.histVaR1[pc].data[iDateSymbol])
                     else:
-                        rSymbol.append(symbol.rAClose[bp].data[iDateSymbol])
-                        rMarket.append(market.rAClose[bp].data[iDateMarket])
+                        rSymbol.append(symbol.rClose[bp].data[iDateSymbol])
+                        rMarket.append(market.rClose[bp].data[iDateMarket])
                         HVaR5.append(symbol.histVaR5[bp].data[iDateSymbol])
                         HVaR1.append(symbol.histVaR1[bp].data[iDateSymbol])
                 except:

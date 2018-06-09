@@ -1,7 +1,6 @@
-from PySide import QtGui
+from PyQt5 import QtWidgets
 import matplotlib
-matplotlib.use('Qt4Agg')
-matplotlib.rcParams['backend.qt4'] = 'PySide'
+matplotlib.use('Qt5Agg')
 
 import main_widget as mw
 import styles as st
@@ -9,9 +8,9 @@ import misc_functions as mf
 import style_parameters as sp
 
 
-class MainWindow(QtGui.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
-        QtGui.QMainWindow.__init__(self)
+        QtWidgets.QMainWindow.__init__(self)
 
         self.setStyleSheet(st.returnStyles())
         self.initialize()
@@ -40,23 +39,23 @@ class MainWindow(QtGui.QMainWindow):
         self.setToolTip('StockBox')
 
     def createMenuBar(self):
-        actSave = QtGui.QAction('&Save figure', self, statusTip = 'Save figure', triggered = self.saveFigure)
-        actExit = QtGui.QAction('E&xit', self, statusTip = 'Exit application', triggered = self.exitApp)
+        actSave = QtWidgets.QAction('&Save figure', self, statusTip = 'Save figure', triggered = self.saveFigure)
+        actExit = QtWidgets.QAction('E&xit', self, statusTip = 'Exit application', triggered = self.exitApp)
         menuBar = self.menuBar()
         menuFile = menuBar.addMenu('&File')
         menuFile.addAction(actSave)
         menuFile.addAction(actExit)
 
     def saveFigure(self):
-        nameFile = QtGui.QFileDialog.getSaveFileName()
+        nameFile = QtWidgets.QFileDialog.getSaveFileName()
         self.mainWidget.fig.savefig(nameFile[0], facecolor = sp.colorWindow)
-        msgBox = QtGui.QMessageBox.information(self, 'Confirmation', 'Saved figure in ' + nameFile[0] + '.')
+        msgBox = QtWidgets.QMessageBox.information(self, 'Confirmation', 'Saved figure in ' + nameFile[0] + '.')
 
     def exitApp(self):
-        reply = QtGui.QMessageBox.question(self, 'Confirm exit', 'Exit application?', \
-            QtGui.QMessageBox.Yes | QtGui.QMessageBox.No, QtGui.QMessageBox.No)
-        if reply == QtGui.QMessageBox.Yes:
-            QtGui.QApplication.instance().quit()
+        reply = QtWidgets.QMessageBox.question(self, 'Confirm exit', 'Exit application?', \
+            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+        if reply == QtWidgets.QMessageBox.Yes:
+            QtWidgets.QApplication.instance().quit()
         else:
             pass
 
