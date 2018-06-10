@@ -1,11 +1,12 @@
 import datetime
 import pickle
-
-from flask import Flask, jsonify
 import pandas as pd
 import numpy as np
-from core.ml import ico_clusterer, ico_industries
+
+from flask import Flask, jsonify
+from core.ml import generate_ico_models, ico_industries
 from flask import request
+from core.utilities import raw_data_file
 
 app = Flask(__name__)
 
@@ -16,9 +17,9 @@ def index():
 
 
 @app.route('/save_models', methods=['GET'])
-def cluster_icos():
-    raw_ico_data = pd.read_csv('../data/ico_data_raw.csv')
-    ico_clusterer(raw_ico_data, save=True)
+def generate_models():
+    raw_ico_data = pd.read_csv(raw_data_file)
+    generate_ico_models(raw_ico_data, save=True)
 
     return "Models saved!"
 
@@ -33,7 +34,7 @@ def investigate_ico():
     full_path = path_to_file + ann_model_filename
 
     with open(full_path, 'rb') as f:
-        pickle_ann_model = pickle.load(f)
+        ann_model = pickle.load(f)
 
     age_days = request.args.get('age_days', default=448, type=int)
     region = request.args.get('region', default=7, type=int)
@@ -46,7 +47,8 @@ def investigate_ico():
     industry = request.args.get('industry', default='blockchain', type=str)
 
     x = np.array([age_days,region,hardcap,telegram,team,N_google_news,N_twitter,price,ico_industries.index(industry)])
-    ico_classification = pickle_ann_model.predict(x.reshape(1, -1))
+    ico_classification = ann_model.predict(x.reshape(1, -1))
+
     return jsonify(ico_classification.tolist())
 
 

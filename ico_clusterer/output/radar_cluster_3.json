@@ -1,47 +1,47 @@
 [
 {"feature":" age ",
-"Strongest": 2.2 ,
-"Weakest": 2.32 ,
-"Average": 1.11
+"Strongest": 2.14 ,
+"Weakest": 2.14 ,
+"Average": 2.14
 },
 {"feature":" hardcap ",
-"Strongest": 5.15 ,
-"Weakest": 6.86 ,
-"Average": 6.56
+"Strongest": 7.97 ,
+"Weakest": 7.97 ,
+"Average": 7.97
 },
 {"feature":" raised ",
-"Strongest": 7.85 ,
-"Weakest": 4.65 ,
-"Average": 6.54
+"Strongest": 7.97 ,
+"Weakest": 7.97 ,
+"Average": 7.97
 },
 {"feature":" telegram ",
-"Strongest": 3.8 ,
-"Weakest": 4.14 ,
-"Average": 3.3
+"Strongest": 4.24 ,
+"Weakest": 4.24 ,
+"Average": 4.24
 },
 {"feature":" team ",
-"Strongest": 0.95 ,
-"Weakest": 0.7 ,
-"Average": 0.17
+"Strongest": 1.76 ,
+"Weakest": 1.76 ,
+"Average": 1.76
 },
 {"feature":" N_google_news ",
-"Strongest": 0,
-"Weakest": 0,
-"Average":0
+"Strongest": 0.3 ,
+"Weakest": 0.3 ,
+"Average": 0.3
 },
 {"feature":" N_twitter ",
-"Strongest": 3.88 ,
-"Weakest": 4.11 ,
-"Average": 3.52
+"Strongest": 4.36 ,
+"Weakest": 4.36 ,
+"Average": 4.36
 },
 {"feature":" price ",
-"Strongest": 0.17 ,
-"Weakest": 0,
-"Average":0
+"Strongest": 1.26 ,
+"Weakest": 1.26 ,
+"Average": 1.26
 },
 {"feature":" ret_ico_to_day_one ",
-"Strongest": 0,
-"Weakest": 0.15 ,
-"Average":0
+"Strongest": 0.1 ,
+"Weakest": 0.1 ,
+"Average": 0.0
 }
 ]
