@@ -10,7 +10,7 @@ def generate_radar_data(f_radar_chart_features,
                               f_weakest_ico_data,
                               f_avg_dict, out_file_name):
 
-    path= path_to_output + out_file_name
+    path = path_to_output + out_file_name
     file_name = open(path, "w+")
     no_features = len(f_radar_chart_features)
     i = 0

@@ -1,14 +1,45 @@
 import datetime
 import pickle
+import math
 
 from sklearn.cluster import KMeans
 from sklearn.neural_network import MLPClassifier
-from core.utilities import ico_clusterer_features, ico_industries, ico_ann_remove_features, path_to_models
+from sklearn.ensemble import RandomForestRegressor
+
+from core.utilities import ico_clusterer_features, ico_industries, ico_ann_remove_features, path_to_models, \
+    etl_regression_target, etl_regression_features, etl_data_file
 
 
-def generate_ico_models(raw_ico_data, clusters_no=7, save=False):
-    etl_raw_ico_data = raw_ico_data.dropna()
+def udf_regress(row, model, feature):
+  if math.isnan(row[feature]):
+      return model.predict(row[etl_regression_target])[0]
+  return row[feature]
 
+
+def prepare_ico_data(raw_ico_data, save=False):
+    industry_quantizer = lambda x: ico_industries.index(x)
+    raw_ico_data.loc[:, 'industry'] = raw_ico_data['industry'].apply(industry_quantizer)
+
+    rf = RandomForestRegressor(max_depth=2, random_state=0)
+
+    median_raised = raw_ico_data[etl_regression_target].dropna().median()
+    raw_ico_data.loc[:, etl_regression_target] = raw_ico_data.apply((lambda x: median_raised if math.isnan(x[etl_regression_target]) else x[etl_regression_target]), axis=1)
+
+    for feature in etl_regression_features:
+        temp_df = raw_ico_data[[feature, etl_regression_target]].dropna()
+        y = temp_df[feature].as_matrix()
+        X = temp_df[etl_regression_target].as_matrix().reshape(-1, 1)
+
+        rf.fit(X, y)
+
+        raw_ico_data.loc[:, feature] = raw_ico_data.apply(udf_regress, model=rf, feature = feature, axis=1)
+
+    if save:
+        raw_ico_data.to_csv(etl_data_file)
+    return raw_ico_data
+
+
+def generate_ico_models(etl_raw_ico_data, clusters_no=7, save=False):
     ico_cluster_data_model = etl_raw_ico_data[ico_clusterer_features]
     industrizer = lambda x: ico_industries.index(x)
     ico_cluster_data_model.loc[:, 'industry'] = ico_cluster_data_model['industry'].apply(industrizer)

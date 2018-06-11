@@ -6,7 +6,7 @@ import numpy as np
 from flask import Flask, jsonify
 from core.ml import generate_ico_models, ico_industries
 from flask import request
-from core.utilities import raw_data_file
+from core.utilities import raw_data_file, reset_system
 
 app = Flask(__name__)
 
@@ -18,6 +18,7 @@ def index():
 
 @app.route('/save_models', methods=['GET'])
 def generate_models():
+    reset_system()
     raw_ico_data = pd.read_csv(raw_data_file)
     generate_ico_models(raw_ico_data, save=True)
 
