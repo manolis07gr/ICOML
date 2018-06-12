@@ -379,7 +379,7 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
 
         #4C) First remove all 'N/A' occurences
 
-        if (team_all[2] == 'N/A') or (team_all[4] == 'N/A'):
+        if (team_all[4] == 'N/A') or (team == 'N/A'):
             team_all = [item for item in team_all if item != 'N/A']
 
         #4D) If length of array is zero after removals, then final values are 'N/A'
