@@ -1,13 +1,14 @@
 import datetime
 import pickle
 import math
+import statsmodels.formula.api as sm
 
 from sklearn.cluster import KMeans
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestRegressor
 
-from core.utilities import ico_clusterer_features, ico_industries, ico_ann_remove_features, path_to_models, \
-    etl_regression_target, etl_regression_features, etl_data_file
+from core.constants import ico_clusterer_features, ico_industries, ico_ann_remove_features, path_to_models, \
+    etl_regression_target, etl_regression_features, etl_data_file, cluster_regression_formula
 
 
 def udf_regress(row, model, feature):
@@ -29,7 +30,7 @@ def prepare_ico_data(raw_ico_data, save=False):
         temp_df = raw_ico_data[[feature, etl_regression_target]].dropna()
         y = temp_df[feature].as_matrix()
         X = temp_df[etl_regression_target].as_matrix().reshape(-1, 1)
-
+        # TODO: Add grid optimisations
         rf.fit(X, y)
 
         raw_ico_data.loc[:, feature] = raw_ico_data.apply(udf_regress, model=rf, feature = feature, axis=1)
@@ -41,7 +42,7 @@ def prepare_ico_data(raw_ico_data, save=False):
 
 def generate_ico_models(etl_raw_ico_data, clusters_no=7, save=False):
     ico_cluster_data_model = etl_raw_ico_data[ico_clusterer_features]
-    
+
     k_means_model = KMeans(n_clusters=clusters_no, random_state=0).fit(ico_cluster_data_model)
     ico_ann_data_model = ico_cluster_data_model.drop(ico_ann_remove_features,1)
 
@@ -69,3 +70,9 @@ def generate_ico_models(etl_raw_ico_data, clusters_no=7, save=False):
         data_model_file = path_to_models + 'clusterer_data_'+ timestamp +'.csv'
         ico_cluster_data_model.to_csv(data_model_file, index=False)
     return k_means_model, ico_cluster_data_model, etl_raw_ico_data
+
+
+def regress_dataframe(regression_dataframe):
+    result = sm.ols(formula=cluster_regression_formula, data=regression_dataframe).fit()
+    return result
+

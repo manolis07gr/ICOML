@@ -1,8 +1,9 @@
 from math import log10
-import statsmodels.formula.api as sm
 
-from core.utilities import radar_chart_features, construct_cluster_data, ecosystem_radar_file_name, \
-    ecosystem_regression_file_name, path_to_output, ecosystems_clusters_file_name
+from core.constants import radar_chart_features, ecosystem_radar_file_name, \
+    ecosystem_regression_file_name, path_to_output, ecosystems_clusters_file_name, cluster_regression_formula
+from core.ml import regress_dataframe
+from core.utilities import construct_cluster_data
 
 
 def generate_radar_data(f_radar_chart_features,
@@ -41,11 +42,11 @@ def generate_radar_data(f_radar_chart_features,
     print("""]""", file=file_name)
 
 
-def generate_regression_data(frame, out_file_name):
+def generate_regression_data(regression_dataframe, out_file_name):
     path = path_to_output + out_file_name
     file_name = open(path, "w+")
 
-    result = sm.ols(formula="raised ~ age + team", data=frame).fit()
+    result = regress_dataframe(regression_dataframe)
     print(result.summary(), file=file_name)
 
 
@@ -156,4 +157,4 @@ def generate_all_clusters_radar_data(consolidated_cluster_data, labels):
         current_file_name = "radar_cluster_"+str(c+1)+".json"
         generate_radar_data(radar_chart_features, strongest_ico_data, weakest_ico_data, avg_cluster_data, current_file_name)
         regression_file_name = "cluster_" + str(c + 1) + "_regression.out"
-        generate_regression_data(consolidated_cluster_data, regression_file_name)
+        generate_regression_data(cluster_data, regression_file_name)

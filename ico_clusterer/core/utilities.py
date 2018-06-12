@@ -2,40 +2,7 @@ import pandas as pd
 import glob
 import os
 
-path_to_data = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/data/"
-path_to_etl_data = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/etl/"
-path_to_models = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/models/"
-path_to_output = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/output/"
-
-raw_data_file_name = "ico_data_raw.csv"
-ecosystems_clusters_file_name = "ico_clusters.json"
-ecosystem_radar_file_name = "radar_ecosystem_data.json"
-ecosystem_regression_file_name = "ecosystem_regression.out"
-etl_data_file_name = "etl_ico_data_raw.csv"
-
-raw_data_file = path_to_data + raw_data_file_name
-etl_data_file = path_to_etl_data + etl_data_file_name
-
-ico_industries =['blockchain', 'entertainment', 'fintech',
-                 'insurance services', 'saas', 'telecommunications',
-                 'transportation', 'other','ecommerce', 'real estate',
-                 'energy', 'social services']
-
-ico_clusterer_features = ['age', 'region', 'industry',
-                          'hardcap', 'raised',
-                          'telegram', 'team', 'N_google_news',
-                          'price', 'ret_ico_to_day_one']
-
-ico_ann_remove_features = ['age', 'raised', 'ret_ico_to_day_one']
-
-
-radar_chart_features = ['age', 'hardcap', 'raised',
-                        'telegram', 'team', 'N_google_news', 'N_twitter',
-                        'price', 'ret_ico_to_day_one']
-
-
-etl_regression_features = ['hardcap', 'N_twitter', 'hype', 'telegram', 'team', 'N_google_news', 'price']
-etl_regression_target = 'raised'
+from core.constants import  path_to_models, path_to_output
 
 
 def construct_cluster_data(raw_ico_data, ico_data_model, clusters):

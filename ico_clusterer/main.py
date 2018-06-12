@@ -1,7 +1,8 @@
 import pandas as pd
 
 from core.ml import generate_ico_models, prepare_ico_data
-from core.utilities import raw_data_file, reset_system
+from core.utilities import reset_system
+from core.constants import raw_data_file
 from ui.json import generate_frontend_data
 
 reset_system()

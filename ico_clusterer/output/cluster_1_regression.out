@@ -1,26 +1,31 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                 raised   R-squared:                       0.019
-Model:                            OLS   Adj. R-squared:                  0.015
-Method:                 Least Squares   F-statistic:                     4.408
-Date:                Tue, 12 Jun 2018   Prob (F-statistic):             0.0127
-Time:                        06:07:16   Log-Likelihood:                -8102.2
-No. Observations:                 447   AIC:                         1.621e+04
-Df Residuals:                     444   BIC:                         1.622e+04
-Df Model:                           2                                         
+Dep. Variable:                 raised   R-squared:                       0.197
+Model:                            OLS   Adj. R-squared:                  0.177
+Method:                 Least Squares   F-statistic:                     10.00
+Date:                Tue, 12 Jun 2018   Prob (F-statistic):           1.41e-08
+Time:                        07:27:03   Log-Likelihood:                -3557.0
+No. Observations:                 210   AIC:                             7126.
+Df Residuals:                     204   BIC:                             7146.
+Df Model:                           5                                         
 Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept      1.173e+06   1.12e+06      1.052      0.294   -1.03e+06    3.37e+06
+team           1.019e+05   5.03e+04      2.026      0.044    2710.325    2.01e+05
+hardcap           0.3630      0.067      5.403      0.000       0.231       0.496
+telegram         72.1925     31.608      2.284      0.023       9.872     134.512
+N_google_news -5.269e+04   2.05e+05     -0.257      0.798   -4.57e+05    3.52e+05
+N_twitter        24.1162     17.747      1.359      0.176     -10.874      59.106
 ==============================================================================
-                 coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-Intercept   1.709e+07   2.17e+06      7.890      0.000    1.28e+07    2.13e+07
-age        -9743.6909   6027.354     -1.617      0.107   -2.16e+04    2101.996
-team        2.315e+05   1.06e+05      2.192      0.029    2.39e+04    4.39e+05
-==============================================================================
-Omnibus:                      399.263   Durbin-Watson:                   0.651
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):            12580.517
-Skew:                           3.736   Prob(JB):                         0.00
-Kurtosis:                      27.892   Cond. No.                         659.
+Omnibus:                       20.603   Durbin-Watson:                   1.740
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):                6.830
+Skew:                           0.063   Prob(JB):                       0.0329
+Kurtosis:                       2.125   Cond. No.                     4.24e+07
 ==============================================================================
 
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.24e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.
