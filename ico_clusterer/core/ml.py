@@ -41,9 +41,7 @@ def prepare_ico_data(raw_ico_data, save=False):
 
 def generate_ico_models(etl_raw_ico_data, clusters_no=7, save=False):
     ico_cluster_data_model = etl_raw_ico_data[ico_clusterer_features]
-    industrizer = lambda x: ico_industries.index(x)
-    ico_cluster_data_model.loc[:, 'industry'] = ico_cluster_data_model['industry'].apply(industrizer)
-
+    
     k_means_model = KMeans(n_clusters=clusters_no, random_state=0).fit(ico_cluster_data_model)
     ico_ann_data_model = ico_cluster_data_model.drop(ico_ann_remove_features,1)
 
