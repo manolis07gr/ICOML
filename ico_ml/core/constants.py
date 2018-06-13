@@ -1,10 +1,12 @@
 ###############################
 #      PATHS & FILENAMES      #
 ###############################
-path_to_data = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/data/"
-path_to_etl_data = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/etl/"
-path_to_models = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/models/"
-path_to_output = "C:/Users/tsapi/Documents/GitHub/icoml/ico_clusterer/output/"
+project_path = "C:/Users/tsapi/Documents/GitHub/icoml/ico_ml/"
+
+path_to_data = project_path + "data/"
+path_to_etl_data = project_path + "etl/"
+path_to_models = project_path + "models/"
+path_to_output = project_path + "output/"
 
 raw_data_file_name = "ico_data_raw.csv"
 ecosystems_clusters_file_name = "ico_clusters.json"
