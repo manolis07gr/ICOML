@@ -49,8 +49,8 @@ for i in range(1,len(data2_all)):
     coin[k] = data2_all[i][1].split('\n')[1].lower()
 
 
-currency = 'holo'
-token = 'hot'
+currency = 'parkgene'
+token = 'gene'
 website_str = currency
 #website_str = 'escoro'
 
@@ -352,12 +352,12 @@ if (team_all[2] != 'N/A') or (team_all[4] != 'N/A'):
         team = team_all[2]
     if team_all[2] != team_all[4]:
         team = team_all[4]
-
+	
 #4B) In the opposite case, proceed as before
    
 #4C) First remove all 'N/A' occurences
 
-if (team_all[2] == 'N/A') or (team_all[4] == 'N/A'):
+if (team_all[4] == 'N/A') or (team == 'N/A'):
     team_all = [item for item in team_all if item != 'N/A']
 
 #4D) If length of array is zero after removals, then final values are 'N/A'
