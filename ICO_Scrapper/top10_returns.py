@@ -24,11 +24,11 @@ def func_top10():
     rows_all = table_all.findAll('tr')
     data2_all = [[td.findChildren(text=True) for td in tr.findAll("td")] for tr in rows_all]
     data2_all = [[u"".join(d).strip() for d in l] for l in data2_all]
-
+    
     coin = []
     for k in range(0,10):
         coin.append(k)
-        coin[k] = data2_all[k+1][1].split('\n')[1].lower().replace(" ","-")
+        coin[k] = data2_all[k+1][1].split('\n')[2].lower().replace(" ","-")
 
     today = dt.datetime.now().date().isoformat().replace('-',"")
 
@@ -60,7 +60,7 @@ def func_top10():
         for j in range(0,len(coin)):
             ravs = ravs + rrr[j][i] * weights[j]
             
-        rav[i] = round(ravs/10.,2)
+        rav[i] = round(ravs/10.,3)
 
     r_top10 = rav
            

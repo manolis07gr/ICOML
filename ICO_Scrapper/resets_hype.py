@@ -4,7 +4,7 @@ from numpy import *
 
 #This program replaces the NA contents of the ico_data_full.csv file with the contents produced by the re-run of the partial py file
 
-with open("outdata/ico_data_full_final.csv") as f1:
+with open("outdata/ico_data_full3.csv") as f1:
     reader1 = csv.reader(f1)
     data1 = [r for r in reader1]
 

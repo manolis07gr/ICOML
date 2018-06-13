@@ -44,7 +44,7 @@ def func_coinret(currency):
 
         #Calculated daily returns array
 
-        r = [round((c[0]-o[0])/o[0],2),]
+        r = [round((c[0]-o[0])/o[0],3),]
         for i in range(1,len(c)):
             r.append(i)
             r[i] = round((c[i]-c[i-1])/c[i-1],2)

@@ -127,10 +127,10 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
 
             #Calculated daily returns array
 
-            r = [round((c[0]-o[0])/o[0],2),]
+            r = [round((c[0]-o[0])/o[0],3),]
             for i in range(1,len(c)):
                 r.append(i)
-                r[i] = round((c[i]-c[i-1])/c[i-1],2)
+                r[i] = round((c[i]-c[i-1])/c[i-1],3)
 
             #Calculate average returns and standard deviation of average returns
             r_av = np.mean(r)
@@ -142,23 +142,23 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
             wd_annual = 252
 
             if len(c) < wd_month:
-                s_1 = round(r_av*wd_month/(r_std*np.sqrt(wd_month)),2)
+                s_1 = round(r_av*wd_month/(r_std*np.sqrt(wd_month)),3)
             if len(c) >= wd_month:
                 r_av = np.mean(r[0:wd_month])
                 r_std = np.std(r[0:wd_month])
-                s_1 = round(r_av/r_std,2)
+                s_1 = round(r_av/r_std,3)
 
             if len(c) < wd_month3:
-                s_3 = round(r_av*wd_month3/(r_std*np.sqrt(wd_month3)),2)
+                s_3 = round(r_av*wd_month3/(r_std*np.sqrt(wd_month3)),3)
             if len(c) >= wd_month3:
                 r_av = np.mean(r[0:wd_month3])
                 r_std = np.std(r[0:wd_month3])
-                s_3 = round(r_av/r_std,2)
+                s_3 = round(r_av/r_std,3)
 
-            s_annual =  round(r_av*wd_annual/(r_std*np.sqrt(wd_annual)),2)
+            s_annual =  round(r_av*wd_annual/(r_std*np.sqrt(wd_annual)),3)
             rav10 = np.mean(rt10)
             rstd10 = np.std(rt10)
-            s_annual2 = round((r_av-rav10)*wd_annual/(r_std*np.sqrt(wd_annual)),2)
+            s_annual2 = round((r_av-rav10)*wd_annual/(r_std*np.sqrt(wd_annual)),3)
 
             #Calculation of coin beta based on BTC daily returns (~1/3 of market dominance)
             displacement = len(rbtc)-len(r)
@@ -203,7 +203,7 @@ with open('outdata/ico_data_full.csv', 'w') as csvfile1, open('outdata/ico_data_
         [N_google_news,N_twitter]=[res6[2],res6[1]]
 
         try:
-            ret_day1a = round(c[0],2)
+            ret_day1a = round(c[0],3)
         except:
             ret_day1a = 'N/A'
 

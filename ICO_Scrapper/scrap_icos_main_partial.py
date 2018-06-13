@@ -48,7 +48,7 @@ for i in range(1,len(data2_all)):
     symbol[k] = data2_all[i][1].split('\n')[0]
     coin[k] = data2_all[i][1].split('\n')[1].lower()
 
-with open('nan_coins2.txt', 'r') as myfile:
+with open('nan_coins_test.txt', 'r') as myfile:
     data111=myfile.read().split('\n')
 
 data111 = data111[0:len(data111)-1]
@@ -57,15 +57,15 @@ data222 = []
 k = -1
 for i in range(0,len(data111)):
     for j in range(0,len(coin)):
-        if data111[i] == coin[j]:
+        if data111[i].replace('-',' ') == coin[j]:
             k = k + 1
             data222.append(k)
             data222[k] = symbol[j]
 
 #Lines below need to be enabled only for tokens with different link names
-data111 = ['nebulas','ambrosus','crypto20','decentbet','bloom','medicalchain','cofound.it','matchpool','agrello','locktrip','friendz','wetrust','spectiv','eboost','bitjob','escroco','peerguess']
-data222 = ['nas','amb','c20','dbet','blt','mtn','cfi','gup','dlt','loc','fdz','trst','sig','ebst','stu','esc','guess']
-data333 = ['nebulas-token','amber','c20','decent-bet','bloomtoken','medical-chain','cofound-it','guppy','agrello-delta','lockchain','friends','trust','signal-token','eboostcoin','student-coin','escoro','guess']
+#data111 = ['nebulas','ambrosus','crypto20','decentbet','bloom','medicalchain','cofound.it','matchpool','agrello','locktrip','friendz','wetrust','spectiv','eboost','bitjob','escroco','peerguess']
+#data222 = ['nas','amb','c20','dbet','blt','mtn','cfi','gup','dlt','loc','fdz','trst','sig','ebst','stu','esc','guess']
+#data333 = ['nebulas-token','amber','c20','decent-bet','bloomtoken','medical-chain','cofound-it','guppy','agrello-delta','lockchain','friends','trust','signal-token','eboostcoin','student-coin','escoro','guess']
     
 #Bitcoin returns
 rbtc = func_btc() 
@@ -80,7 +80,7 @@ columnTitles2 = "coin,start,end,duration,age,region,industry,team,raised,hardcap
 
 columnTitles3 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
-with open('outdata/ico_data_full_nans2.csv', 'w') as csvfile1, open('outdata/ico_data_reduced_nans2.csv', 'w') as csvfile2, open('outdata/ico_data_reduced_wratings_nans2.csv', 'w') as csvfile3:
+with open('outdata/ico_data_full_nans_test.csv', 'w') as csvfile1, open('outdata/ico_data_reduced_nans_test.csv', 'w') as csvfile2, open('outdata/ico_data_reduced_wratings_nans_test.csv', 'w') as csvfile3:
     csvfile1.write(columnTitles)
     writer=csv.writer(csvfile1, delimiter=',')
     csvfile2.write(columnTitles2)
@@ -88,11 +88,11 @@ with open('outdata/ico_data_full_nans2.csv', 'w') as csvfile1, open('outdata/ico
     csvfile3.write(columnTitles3)
     writer3=csv.writer(csvfile3, delimiter=',')
 
-    for i in range(0,len(coin)):
+    for i in range(0,len(data111)):
         currency = data111[i].replace(' ','-')
         token = data222[i]
-        #link_web = currency
-        link_web = data333[i]
+        link_web = currency
+        #link_web = data333[i]
 
         try:
             data = urllib2.urlopen('https://coinmarketcap.com/currencies/'+link_web+'/historical-data/?start=20130428&end='+today)
@@ -134,10 +134,10 @@ with open('outdata/ico_data_full_nans2.csv', 'w') as csvfile1, open('outdata/ico
 
             #Calculated daily returns array
 
-            r = [round((c[0]-o[0])/o[0],2),]
+            r = [round((c[0]-o[0])/o[0],3),]
             for i in range(1,len(c)):
                 r.append(i)
-                r[i] = round((c[i]-c[i-1])/c[i-1],2)
+                r[i] = round((c[i]-c[i-1])/c[i-1],3)
 
             #Calculate average returns and standard deviation of average returns
             r_av = np.mean(r)
@@ -149,23 +149,23 @@ with open('outdata/ico_data_full_nans2.csv', 'w') as csvfile1, open('outdata/ico
             wd_annual = 252
 
             if len(c) < wd_month:
-                s_1 = round(r_av*wd_month/(r_std*np.sqrt(wd_month)),2)
+                s_1 = round(r_av*wd_month/(r_std*np.sqrt(wd_month)),3)
             if len(c) >= wd_month:
                 r_av = np.mean(r[0:wd_month])
                 r_std = np.std(r[0:wd_month])
-                s_1 = round(r_av/r_std,2)
+                s_1 = round(r_av/r_std,3)
 
             if len(c) < wd_month3:
-                s_3 = round(r_av*wd_month3/(r_std*np.sqrt(wd_month3)),2)
+                s_3 = round(r_av*wd_month3/(r_std*np.sqrt(wd_month3)),3)
             if len(c) >= wd_month3:
                 r_av = np.mean(r[0:wd_month3])
                 r_std = np.std(r[0:wd_month3])
-                s_3 = round(r_av/r_std,2)
+                s_3 = round(r_av/r_std,3)
 
-            s_annual =  round(r_av*wd_annual/(r_std*np.sqrt(wd_annual)),2)
+            s_annual =  round(r_av*wd_annual/(r_std*np.sqrt(wd_annual)),3)
             rav10 = np.mean(rt10)
             rstd10 = np.std(rt10)
-            s_annual2 = round((r_av-rav10)*wd_annual/(r_std*np.sqrt(wd_annual)),2)
+            s_annual2 = round((r_av-rav10)*wd_annual/(r_std*np.sqrt(wd_annual)),3)
 
             #Calculation of coin beta based on BTC daily returns (~1/3 of market dominance)
             displacement = len(rbtc)-len(r)
@@ -213,7 +213,7 @@ with open('outdata/ico_data_full_nans2.csv', 'w') as csvfile1, open('outdata/ico
         [N_google_news,N_twitter]=[res6[2],res6[1]]
 
         try:
-            ret_day1a = round(c[0],2)
+            ret_day1a = round(c[0],3)
         except:
             ret_day1a = 'N/A'
 
