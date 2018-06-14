@@ -443,139 +443,139 @@ sisa,20 Nov 2017,20 Dec 2017,30.0,174.0,12,fintech,6,N/A,N/A,N/A,0.23,714,0,2968
 stex,24 Nov 2017,31 Dec 2017,37.0,163.0,5,other,3,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,3009,0.224,0.127,2.016,2.016,-2646.879,5.154,85.986,-0.135
 fapcoin,15 Sep 2017,31 Oct 2017,46.0,224.0,12,entertainment,N/A,N/A,N/A,N/A,0.3,N/A,0,N/A,-0.463,32723,0.097,0.082,1.295,1.422,0.263,13.385,0.034,0.165
 plexcoin,20 Sep 2017,01 Oct 2017,11.0,254.0,12,fintech,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,27979,0.035,0.073,1.161,1.339,-0.581,-2.615,0.007,-0.043
-solomonexchange,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,2,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-hackspacecapital,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,1,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-impakfinance,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-modum.io,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,1,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-detectortoken,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,2,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-silentnotary,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-intelligenttradingtech,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-kybernetwork,31 Aug 2017,15 Sep 2017,15.0,272.0,7,blockchain,10,46000000.0,46000000.0,1.0,0.41,11207,30,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+solomonexchange,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,2,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+hackspacecapital,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,1,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+impakfinance,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+modum.io,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,1,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+detectortoken,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,2,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+silentnotary,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+intelligenttradingtech,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+kybernetwork,31 Aug 2017,15 Sep 2017,15.0,272.0,7,blockchain,10,46000000.0,46000000.0,1.0,0.41,11207,30,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 kickico,29 Aug 2017,16 Sep 2017,18.0,271.0,2,saas,16,21581925.0,21581925.0,1.0,0.08,6000,23,23,2.103,29279,-0.114,-0.126,-2.002,-2.029,0.196,-1.947,0.001,0.0
-smartinvestmentfundtoken,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+smartinvestmentfundtoken,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 trackr,16 Aug 2017,15 Sep 2017,30.0,272.0,4,blockchain,3,28879811.0,N/A,N/A,0.05,N/A,0,N/A,-0.057,12612,0.307,0.176,2.796,2.781,-0.059,0.51,0.039,0.087
 facecoin,N/A,N/A,N/A,N/A,12,other,5,N/A,N/A,N/A,N/A,N/A,3,560,0.0,4779,0.207,0.119,1.893,1.885,-0.591,-33.902,0.275,0.481
-icobox,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,12,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-social(scl),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,1,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-enigmacatalyst,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,6,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-ahoolee,28 Aug 2017,11 Sep 2017,14.0,276.0,2,ecommerce,8,N/A,10000000.0,N/A,0.4,N/A,6,6665,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-stuffgogo,12 Aug 2017,8 Sep 2017,27.0,279.0,1,saas,3,23975.0,N/A,0.0,0.03,57,1,4072,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-prospector,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-onegram,27 May 2017,24 Sep 2017,120.0,263.0,12,blockchain,7,N/A,N/A,0.22,41.66,N/A,3,1299,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+icobox,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,12,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+social(scl),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,1,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+enigmacatalyst,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,6,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+ahoolee,28 Aug 2017,11 Sep 2017,14.0,276.0,2,ecommerce,8,N/A,10000000.0,N/A,0.4,N/A,6,6665,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+stuffgogo,12 Aug 2017,8 Sep 2017,27.0,279.0,1,saas,3,23975.0,N/A,0.0,0.03,57,1,4072,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+prospector,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+onegram,27 May 2017,24 Sep 2017,120.0,263.0,12,blockchain,7,N/A,N/A,0.22,41.66,N/A,3,1299,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 filecoin,10 Aug 2017,10 Sep 2017,31.0,277.0,1,saas,13,257000000.0,257000000.0,1.0,0.75,N/A,40,22551,14.333,296217,0.236,0.134,2.133,2.091,-0.162,-1.662,0.0,0.002
-alpencoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-hubii,N/A,N/A,N/A,N/A,12,other,2,7130256.0,50930400.0,0.14,0.33,1278,5,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-worldwideanonymousmessaging,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-indorse,8 Aug 2017,8 Sep 2017,31.0,279.0,7,saas,19,9247392.0,14915148.0,0.62,0.31,12563,0,804,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-finshicapital,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-moeda,28 Jul 2017,28 Aug 2017,31.0,290.0,10,fintech,8,N/A,N/A,N/A,1.0,2747,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+alpencoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+hubii,N/A,N/A,N/A,N/A,12,other,2,7130256.0,50930400.0,0.14,0.33,1278,5,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+worldwideanonymousmessaging,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+indorse,8 Aug 2017,8 Sep 2017,31.0,279.0,7,saas,19,9247392.0,14915148.0,0.62,0.31,12563,0,804,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+finshicapital,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+moeda,28 Jul 2017,28 Aug 2017,31.0,290.0,10,fintech,8,N/A,N/A,N/A,1.0,2747,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 xplay,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,204,-0.176,-1.4,-2.8,-2.834,0.034,-0.573,-0.024,-0.025
 corion,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,18358,0.091,0.05,0.792,0.907,-0.323,-5.279,-0.002,-0.019
-paquarium,20 Jul 2017,24 Aug 2017,35.0,294.0,5,other,10,61980.0,N/A,N/A,0.1,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-monsterbyte,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-coindash,17 Jul 2017,17 Aug 2017,31.0,301.0,12,saas,9,7000000.0,N/A,N/A,0.5,2,0,549,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-district0xnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-11.97,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-rootproject,10 Apr 2018,13 Apr 2018,3.0,62.0,1,blockchain,10,N/A,13000000.0,N/A,N/A,4757,0,1259,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+paquarium,20 Jul 2017,24 Aug 2017,35.0,294.0,5,other,10,61980.0,N/A,N/A,0.1,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+monsterbyte,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+coindash,17 Jul 2017,17 Aug 2017,31.0,301.0,12,saas,9,7000000.0,N/A,N/A,0.5,2,0,549,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+district0xnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+11.97,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+rootproject,10 Apr 2018,13 Apr 2018,3.0,62.0,1,blockchain,10,N/A,13000000.0,N/A,N/A,4757,0,1259,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 trueflip,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,133868,-0.088,0.02,0.323,0.432,-0.114,-0.256,0.009,-0.017
-geofounders,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+geofounders,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 primalbase,27 Jun 2017,28 Jun 2017,1.0,351.0,5,fintech,3,7600000.0,7600000.0,1.0,N/A,N/A,0,884,0.0,452,0.16,0.054,0.853,0.951,0.104,0.304,0.003,0.004
-eros,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-gilgam,20 Jun 2017,20 Jul 2017,30.0,329.0,5,entertainment,8,686374.0,68637400.0,0.01,0.45,588,0,2686,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-gilgam.es,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-sumerchain,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+eros,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+gilgam,20 Jun 2017,20 Jul 2017,30.0,329.0,5,entertainment,8,686374.0,68637400.0,0.01,0.45,588,0,2686,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+gilgam.es,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+sumerchain,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 bitquence,28 Jun 2017,16 Jul 2017,18.0,333.0,1,blockchain,10,1680433.0,1680433.0,1.0,0.03,1668,0,347,102.333,8566770,-0.198,-1.574,-3.148,-2.943,-0.431,-3.533,-0.024,-0.023
 pressone,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,169164,0.027,-0.143,-2.264,-2.135,1.353,11.206,0.002,0.015
-orocrypt,14 Jun 2017,14 Jul 2017,30.0,335.0,10,other,4,N/A,N/A,N/A,N/A,N/A,0,5512,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-fuck,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,2,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+orocrypt,14 Jun 2017,14 Jul 2017,30.0,335.0,10,other,4,N/A,N/A,N/A,N/A,N/A,0,5512,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+fuck,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,2,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 tezos,1 Jul 2017,13 Jul 2017,12.0,336.0,1,fintech,16,232000000.0,N/A,N/A,0.47,369,0,10007,2.936,459394,0.04,0.143,2.273,2.489,0.182,0.991,0.008,-0.006
 insurex,11 Jul 2017,13 Jul 2017,2.0,336.0,4,other,3,7104000.0,N/A,N/A,0.16,N/A,0,N/A,3.614,403962,0.006,0.05,0.1,0.269,0.254,1.539,-0.011,-0.012
 nimiq,28 Jun 2017,8 Jul 2017,10.0,341.0,5,blockchain,13,10000000.0,10000000.0,1.0,1.4,N/A,0,900,-0.393,1222,0.117,0.094,1.489,1.53,-0.292,0.322,0.01,-0.028
-leviarcoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,963,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-onplace,10 Feb 2018,15 Mar 2018,33.0,91.0,1,blockchain,10,N/A,N/A,N/A,N/A,N/A,0,147,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+leviarcoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,963,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+onplace,10 Feb 2018,15 Mar 2018,33.0,91.0,1,blockchain,10,N/A,N/A,N/A,N/A,N/A,0,147,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 santiment,4 Jul 2017,5 Jul 2017,1.0,344.0,6,fintech,12,12215250.0,12215250.0,1.0,0.27,N/A,0,9015,0.173,4528390,-0.004,0.08,1.273,1.382,-0.115,-4.145,0.011,-0.02
 openanx,22 Jun 2017,21 Jul 2017,29.0,328.0,3,fintech,28,18756937.0,22598719.0,0.83,0.45,N/A,0,12347,0.55,2865510,-0.153,-1.217,-2.434,-2.17,0.283,1.774,-0.017,-0.018
 rialto,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,51162,0.265,0.194,3.075,3.144,-0.157,0.842,0.012,-0.007
-crypviser,20 May 2017,30 Jun 2017,41.0,349.0,2,saas,6,4025989.0,7455535.0,0.54,1.0,2242,0,10313,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-rialto.ai,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+crypviser,20 May 2017,30 Jun 2017,41.0,349.0,2,saas,6,4025989.0,7455535.0,0.54,1.0,2242,0,10313,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+rialto.ai,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 encryptotel,24 Apr 2017,31 May 2017,37.0,379.0,2,saas,3,44292128.0,N/A,N/A,N/A,356,0,215,0.0,2253,0.076,0.072,1.143,1.197,0.18,3.417,0.081,0.088
 dcorp,01 Jun 2017,29 Jun 2017,28.0,350.0,12,other,4,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,199375,-0.09,0.134,2.122,2.199,0.213,-0.077,0.01,0.033
-air,N/A,N/A,N/A,N/A,12,other,N/A,7072410.0,9429880.0,0.75,0.0471,4270,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-21million,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-silvercoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+air,N/A,N/A,N/A,N/A,12,other,N/A,7072410.0,9429880.0,0.75,0.0471,4270,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+21million,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+silvercoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 idice,12 Jun 2017,26 Jun 2017,14.0,353.0,12,other,N/A,2500000.0,N/A,N/A,N/A,N/A,0,N/A,0.0,3644,0.114,0.076,1.211,1.252,-0.487,12.388,0.09,0.033
 octanox,N/A,N/A,N/A,N/A,12,entertainment,3,N/A,N/A,N/A,N/A,844,0,N/A,0.0,33929,0.202,0.121,1.929,1.985,-0.432,-2.695,0.026,-0.002
 nvo,23 May 2017,27 Jun 2017,35.0,352.0,12,saas,4,7790556.0,N/A,N/A,0.52,N/A,0,2700,-0.157,1831,0.142,0.085,1.356,1.433,-0.415,-6.562,0.026,-0.005
-masknetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-footballcoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-internetofcoins,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-bidlend,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-superdao,N/A,N/A,N/A,N/A,12,other,4,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-aira,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-embermine,5 May 2017,2 Jun 2017,28.0,377.0,1,saas,4,80000.0,N/A,N/A,0.04,1052,0,347,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-adel,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-basicattentiontoken,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-exscudo,25 Apr 2017,31 May 2017,36.0,379.0,5,saas,9,5389491.0,5389491.0,1.0,0.44,N/A,0,9209,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-mysteriumnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-e4row,2 May 2017,23 May 2017,21.0,387.0,12,saas,1,40000032.0,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-vivacoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-bitcoingrowthfund,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-legendsroom,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+masknetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+footballcoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+internetofcoins,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+bidlend,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+superdao,N/A,N/A,N/A,N/A,12,other,4,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+aira,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+embermine,5 May 2017,2 Jun 2017,28.0,377.0,1,saas,4,80000.0,N/A,N/A,0.04,1052,0,347,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+adel,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+basicattentiontoken,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+exscudo,25 Apr 2017,31 May 2017,36.0,379.0,5,saas,9,5389491.0,5389491.0,1.0,0.44,N/A,0,9209,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+mysteriumnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+e4row,2 May 2017,23 May 2017,21.0,387.0,12,saas,1,40000032.0,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+vivacoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+bitcoingrowthfund,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+legendsroom,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 nexxus,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,15769,0.17,0.184,2.919,2.947,0.127,-26.652,0.157,0.311
-quantumresistantledger,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-creativechain,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-apptrade,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-backtoearth,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-iex.ec,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-blockchaincapital,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-cosmosnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-cosmos,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-equibit,01 Feb 2017,01 Apr 2017,59.0,439.0,1,other,1,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-chainofpoints,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-cashscripter,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+quantumresistantledger,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+creativechain,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+apptrade,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+backtoearth,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+iex.ec,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+blockchaincapital,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+cosmosnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+cosmos,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+equibit,01 Feb 2017,01 Apr 2017,59.0,439.0,1,other,1,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+chainofpoints,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+cashscripter,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 lykke,N/A,N/A,N/A,N/A,6,other,9,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,74389,-0.103,0.038,0.605,0.896,-0.001,-3.976,0.002,-0.005
-augmentors,30 Jan 2017,28 Feb 2017,29.0,471.0,11,saas,7,10695258.0,10695258.0,1.0,0.08,N/A,0,4860,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-lykke(2ndround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-contingency,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-dfinity,N/A,N/A,N/A,N/A,12,other,30,N/A,N/A,N/A,N/A,59600,0,47,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-betking,7 Aug 2017,4 Sep 2017,28.0,283.0,4,other,N/A,6500000.0,N/A,N/A,0.09,123,0,2960,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-ether.camp,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-virtualaccelerator,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-mysterium(1stround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-vdice,15 Nov 2016,15 Dec 2016,30.0,546.0,12,other,N/A,3000000.0,N/A,N/A,0.08,N/A,0,5631,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-beyondthevoid,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-massnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-arcadecity,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-etcwin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-kibolotto,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-lykke(1stround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+augmentors,30 Jan 2017,28 Feb 2017,29.0,471.0,11,saas,7,10695258.0,10695258.0,1.0,0.08,N/A,0,4860,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+lykke(2ndround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+contingency,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+dfinity,N/A,N/A,N/A,N/A,12,other,30,N/A,N/A,N/A,N/A,59600,0,47,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+betking,7 Aug 2017,4 Sep 2017,28.0,283.0,4,other,N/A,6500000.0,N/A,N/A,0.09,123,0,2960,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+ether.camp,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+virtualaccelerator,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+mysterium(1stround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+vdice,15 Nov 2016,15 Dec 2016,30.0,546.0,12,other,N/A,3000000.0,N/A,N/A,0.08,N/A,0,5631,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+beyondthevoid,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+massnetwork,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+arcadecity,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+etcwin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+kibolotto,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+lykke(1stround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 antshares,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,98810800,-0.187,-1.48,-2.961,-2.646,-0.126,-0.998,-0.018,-0.018
 metaverse,N/A,N/A,N/A,N/A,12,other,1,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,1239070,-0.017,-0.094,-1.489,-1.307,-0.108,2.412,0.012,-0.006
 elastic,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,64558,-0.344,0.019,0.302,0.4,-0.11,1.648,0.002,-0.018
-heat,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-icoo,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+heat,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+icoo,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 xaurum,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,36,0,N/A,0.0,3753,0.28,0.157,2.499,2.598,-0.254,-1.265,0.007,-0.007
 stratis,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,48504,0.199,0.159,2.53,2.639,-0.005,-2.095,0.013,-0.025
-breakoutcoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+breakoutcoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 waves,N/A,N/A,N/A,N/A,12,saas,1,N/A,N/A,N/A,N/A,N/A,0,128098,0.0,83734,-0.286,-0.152,-2.405,-2.301,-0.009,-3.644,0.005,-0.025
 rise,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,42224,0.183,0.028,0.451,0.63,0.119,19.375,0.015,0.021
-plutus,30 Jun 2016,8 Jul 2016,8.0,706.0,5,saas,12,1000000.0,N/A,N/A,N/A,N/A,0,2920,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-mycelium(2ndround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-thedao,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-projectdecorum,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-ionomy,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-digixglobal,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,13886,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+plutus,30 Jun 2016,8 Jul 2016,8.0,706.0,5,saas,12,1000000.0,N/A,N/A,N/A,N/A,0,2920,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+mycelium(2ndround),N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+thedao,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+projectdecorum,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+ionomy,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+digixglobal,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,13886,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 lisk,N/A,N/A,N/A,N/A,5,other,5,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,222502,0.102,0.147,2.326,2.36,-0.075,-2.318,0.012,-0.019
 obits,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,606,0.118,0.083,1.325,1.384,0.056,-4.269,0.009,-0.014
-spellsofgenesis,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+spellsofgenesis,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 factom,N/A,N/A,N/A,N/A,1,other,4,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,29947,-0.054,-0.055,-0.867,-0.74,-0.074,5.728,0.009,-0.019
 neucoin,17 Nov 2017,17 Dec 2017,30.0,179.0,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,17457,-0.402,-0.104,-1.649,-1.427,0.876,-17.536,0.1,0.006
-dacplay,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-getgems,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,2821,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
-muse,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,12,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+dacplay,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+getgems,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,2821,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+muse,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,12,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 supernet,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,40814,0.315,0.545,1.09,1.258,-0.438,-3.972,0.004,0.005
 ethereum,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,3,0,N/A,0.0,164329,-0.01,-0.059,-0.944,-0.916,0.007,-0.273,0.008,-0.01
-storjcoinx,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+storjcoinx,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
 swarm,N/A,N/A,N/A,N/A,1,other,10,5370258.0,53702580.0,0.1,27.42,3673,0,N/A,-0.999,228,-0.122,0.061,0.976,0.996,0.392,20.926,0.053,0.388
 maidsafecoin,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,21809,-0.022,0.049,0.77,0.815,-0.093,-1.505,0.005,-0.02
 counterparty,N/A,N/A,N/A,N/A,12,other,N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,0.0,42170,0.063,-0.068,-1.081,-1.051,-0.028,-0.479,0.005,0.0

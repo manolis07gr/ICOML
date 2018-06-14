@@ -23,30 +23,29 @@ mv outdata/ico_data_reduced_noNA.csv outdata/ico_data_full.csv
 cat outdata/coindesk_na_wr_data.csv >> outdata/ico_data_reduced_wr_noNA.csv
 mv outdata/ico_data_reduced_wr_noNa.csv outdata/ico_data_full_wr.csv
 
-#
 #THAT IS MAIN PART OF THE RUN NOW WE NEED TO RE-INSTERT GOOG RESULTS AND CHECK COMPLETENESS
 #PRODUCES: ico_data_full.csv and ico_data_full_wr.csv
 
-#Run google_search.py to add Google news data
-#this is because Google restricts search bots to 50 searches an hour per IP
+#Remove Duplicates
+awk -F',' '!seen[$1]++' outdata/ico_data_full.csv > outdata/ico_data_full_nodup.csv
+awk -F',' '!seen[$1]++' outdata/ico_data_full_wr.csv > outdata/ico_data_full_wr_nodup.csv
+
+python rescan.py > nan_coins.txt
+python scrap_icos_main_partial.py
+python reset_na_vals.py
+python reset_na_vals2.py
+cp outdata/ico_data_full_nodup3.csv outdata/ico_data_full2.csv
+cp outdata/ico_data_full_wr_nodup3.csv outdata/ico_data_full_wr2.csv
+
+#Import Google News data from previous run
 python import_google_data.py
-#REMEMBER TO COPY COLUMN FROM ico_google_new and paste it on ico_data_full
-
-#Replaces missing N/As from coinmarketcap with actual data
-#will produce ico_data_reduced_nans.csv and ico_data_full2.csv
-python rescan1.py >> nan_coins.txt
-python scrap_icos_main_partial1.py
-python replaces_nans1.py
-python rescan2.py >> nan_coins2.txt
-python scrap_icos_main_partial2.py
-python replaces_nans2.py
-
+python reset_google_vals.py
 cp outdata/ico_data_full3.csv outdata/ico_data_full_final.csv
-python resets_hype.py
-python resets_google.py
-cp outdata/ico_data_full_final_b.csv outdata/ico_data_full_final.csv
-cp outdata/ico_data_full_final_hype_b.csv outdata/ico_data_full_final_hype.csv
+cp outdata/ico_data_full_wr3.csv outdata/ico_data_full_final_hype.csv 
 python uniform_set_extract.py
+
+python google_nans.py
+python open_google_news.py
 
 #FINAL PRODUCTS: outdata/ico_data_full_final.csv, outdata/ico_data_full_final_hype.csv
 # and outdata/ico_data_full_final_hype_uniform.csv
