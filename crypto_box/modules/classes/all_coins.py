@@ -27,7 +27,7 @@ class FullCoinList:
                 tds = tr.findAll('td')
                 for td, col in zip(tds, cols):
                     if col == 'Name':
-                        df.at[i_row, col] = td.text.strip().split('\n')[1]
+                        df.at[i_row, col] = td.text.strip().split('\n')[2]
                     else:
                         df.at[i_row, col] = td.text.strip().split('\n')[0]
 

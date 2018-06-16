@@ -14,6 +14,8 @@ class AddSymbol(QtWidgets.QPushButton):
         self.clicked.connect(self.getSymbol)
 
     def getSymbol(self, tmpStr = ''):
+        if tmpStr is False:
+            tmpStr = ''
         if tmpStr == '':
             tmpStr = self.mainWidget.getSymbol.text().upper()
         if tmpStr != '':
