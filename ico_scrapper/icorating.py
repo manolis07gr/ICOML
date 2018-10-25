@@ -123,6 +123,9 @@ def func_icorating(currency,token):
         rows = value_7.findAll('tr')
         data = [[td.findChildren(text=True) for td in tr.findAll("td")] for tr in rows]
         team4 = len(data)-2
+        
+        if team4 <= 0:
+            team4 = 'N/A'
 
     except:
         team4 = 'N/A'

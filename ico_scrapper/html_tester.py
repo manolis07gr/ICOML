@@ -12,8 +12,8 @@ import numpy as np
 from numpy import *
 import pandas as pd
 
-currency = 'delphy'
-token = 'dpy'
+currency = 'verge'
+token = 'xvg'
 
 bitcoin = func_btc()
 top10s = func_top10()
@@ -21,9 +21,9 @@ top10s = func_top10()
 #rt10 = func_top10()
 #print(rt10)
 
-print(ico_data_collector(['delphy','dpy','delphy'],bitcoin,top10s))
+#print(ico_data_collector(['delphy','dpy','delphy'],bitcoin,top10s))
 
-"""
+
 res = func_icobench(currency)
 res2 = func_icodrops(currency)
 res3 = func_tokenmarket(currency)
@@ -32,7 +32,7 @@ res5 = func_icomarks(currency)
 res6 = func_icobazaar(currency)
 res7 = func_googletwitter(currency)
 print(res,res2,res3,res4,res5,res6,res7)
-"""
+
 
 #print(ico_data_collector(['bitcoin','btc','bitcoin'])[1])
 

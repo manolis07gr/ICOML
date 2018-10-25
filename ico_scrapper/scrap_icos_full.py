@@ -113,18 +113,18 @@ for i in range(0,len(crypto_data)):
         target_data.append(j)
         full_data[j] = ico_data_collector(crypto_data[i],bitcoin,top10s)[0]
         target_data[j] = ico_data_collector(crypto_data[i],bitcoin,top10s)[1]
-        ##print('BEFORE',j,target_data[j])
+        print('BEFORE',j,target_data[j])
 
 """
 f = open('dataset_restart2',"r")
 i = -1
-[name,sd,ed,dur,age,reg,indus,team,raised,hardcap,success,price,teleg,goog,twit,hype,risk,bazaar,ret1,vol1,s1,s3,syr,syr2,bbtc,b10,abtc,a10]=[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
+[name,sd,ed,dur,age,reg,indus,team,raised,hardcap,success,price,teleg,goog,twit,views,time,hype,risk,bazaar,ret1,vol1,s1,s3,syr,syr2,bbtc,b10,abtc,a10]=[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
 target_data = []
 for line in f:
     i = i + 1
     (name.append(i),sd.append(i),ed.append(i),dur.append(i),age.append(i))
     (reg.append(i),indus.append(i),team.append(i),raised.append(i),hardcap.append(i),success.append(i),price.append(i),teleg.append(i),goog.append(i))
-    (twit.append(i),hype.append(i),risk.append(i),bazaar.append(i))
+    (twit.append(i),views.append(i),time.append(i),hype.append(i),risk.append(i),bazaar.append(i))
     (ret1.append(i),vol1.append(i),s1.append(i),s3.append(i),syr.append(i),syr2.append(i),bbtc.append(i),b10.append(i),abtc.append(i),a10.append(i))
     target_data.append(i)
 
@@ -179,58 +179,66 @@ for line in f:
         twit[i] = int(eval(line.split('\n')[0].split(",")[14]))
     except:
         twit[i] = 'N/A'
+    try:
+        views[i] = int(eval(line.split('\n')[0].split(",")[15]))
+    except:
+        views[i] = 'N/A'
+    try:
+        time[i] = int(eval(line.split('\n')[0].split(",")[16]))
+    except:
+        time[i] = 'N/A'
         
-    hype[i] = line.split('\n')[0].split(",")[15].replace("'","")
-    risk[i] = line.split('\n')[0].split(",")[16].replace("'","")
+    hype[i] = line.split('\n')[0].split(",")[17].replace("'","")
+    risk[i] = line.split('\n')[0].split(",")[18].replace("'","")
 
     try:
-        bazaar[i] = eval(line.split('\n')[0].split(",")[17])
+        bazaar[i] = eval(line.split('\n')[0].split(",")[19])
     except:
         bazaar[i] = 'N/A'        
     try:
-        ret1[i] = eval(line.split('\n')[0].split(",")[18])
+        ret1[i] = eval(line.split('\n')[0].split(",")[20])
     except:
         ret1[i] = 'N/A'
     try:
-        vol1[i] = eval(line.split('\n')[0].split(",")[19])
+        vol1[i] = eval(line.split('\n')[0].split(",")[21])
     except:
         vol1[i] = 'N/A'
     try:
-        s1[i] = eval(line.split('\n')[0].split(",")[20])
+        s1[i] = eval(line.split('\n')[0].split(",")[22])
     except:
         s1[i] = 'N/A'
     try:
-        s3[i] = eval(line.split('\n')[0].split(",")[21])
+        s3[i] = eval(line.split('\n')[0].split(",")[23])
     except:
         s3[i] = 'N/A'
     try:
-        syr[i] = eval(line.split('\n')[0].split(",")[22])
+        syr[i] = eval(line.split('\n')[0].split(",")[24])
     except:
         syr[i] = 'N/A'
     try:
-        syr2[i] = eval(line.split('\n')[0].split(",")[23])
+        syr2[i] = eval(line.split('\n')[0].split(",")[25])
     except:
         syr2[i] = 'N/A'
     try:
-        bbtc[i] = eval(line.split('\n')[0].split(",")[24])
+        bbtc[i] = eval(line.split('\n')[0].split(",")[26])
     except:
         bbtc[i] = 'N/A'
     try:
-        b10[i] = eval(line.split('\n')[0].split(",")[25])
+        b10[i] = eval(line.split('\n')[0].split(",")[27])
     except:
         b10[i] = 'N/A'
     try:
-        abtc[i] = eval(line.split('\n')[0].split(",")[26])
+        abtc[i] = eval(line.split('\n')[0].split(",")[28])
     except:
         abtc[i] = 'N/A'
     try:
-        a10[i] = eval(line.split('\n')[0].split(",")[27])
+        a10[i] = eval(line.split('\n')[0].split(",")[29])
     except:
         a10[i] = 'N/A'
         
-    target_data[i] = [name[i],sd[i],ed[i],dur[i],age[i],reg[i],indus[i],team[i],raised[i],hardcap[i],success[i],price[i],teleg[i],goog[i],twit[i],hype[i],risk[i],bazaar[i],ret1[i],vol1[i],s1[i],s3[i],syr[i],syr2[i],bbtc[i],b10[i],abtc[i],a10[i]]
-
+    target_data[i] = [name[i],sd[i],ed[i],dur[i],age[i],reg[i],indus[i],team[i],raised[i],hardcap[i],success[i],price[i],teleg[i],goog[i],twit[i],views[i],time[i],hype[i],risk[i],bazaar[i],ret1[i],vol1[i],s1[i],s3[i],syr[i],syr2[i],bbtc[i],b10[i],abtc[i],a10[i]]
 """
+    
 #Restore Google News numbers from previous scan
 
 with open("outdata2/ico_google_new.csv") as f2:
@@ -270,6 +278,7 @@ for i in range(0,len(target_data)):
 
 target_data = target_data2
 
+
 l = -1
 full_data2 = []
 for i in range(0,len(full_data)):
@@ -288,9 +297,9 @@ full_data = full_data2
 
 with open('ico_data_full.txt', 'w') as f:
     for k in range(0,len(full_data)):
-        print(full_data[k], file=f) 
+        print(full_data[k], file=f)
 
-columnTitles = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
+columnTitles = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
 with open('outdata/ico_data_reduced.csv', 'w') as csvfile:
     csvfile.write(columnTitles)
@@ -312,21 +321,23 @@ with open('outdata/ico_data_reduced.csv', 'w') as csvfile:
         telegram = target_data[k][12]
         N_google_news = target_data[k][13]
         N_twitter = target_data[k][14]
-        hype = target_data[k][15]
-        risk = target_data[k][16]
-        bazaar = target_data[k][17]
-        ret_icoday1 = target_data[k][18]
-        vol_day1 = target_data[k][19]
-        sharpe_1 = target_data[k][20]
-        sharpe_3 = target_data[k][21]
-        sharpe_yr = target_data[k][22]
-        sharpe_yr2 = target_data[k][23]
-        beta_btc = target_data[k][24]
-        beta_top10 = target_data[k][25]
-        alpha_btc = target_data[k][26]
-        alpha_top10 = target_data[k][27]
+        N_daily_views = target_data[k][15]
+        N_daily_time = target_data[k][16]
+        hype = target_data[k][17]
+        risk = target_data[k][18]
+        bazaar = target_data[k][19]
+        ret_icoday1 = target_data[k][20]
+        vol_day1 = target_data[k][21]
+        sharpe_1 = target_data[k][22]
+        sharpe_3 = target_data[k][23]
+        sharpe_yr = target_data[k][24]
+        sharpe_yr2 = target_data[k][25]
+        beta_btc = target_data[k][26]
+        beta_top10 = target_data[k][27]
+        alpha_btc = target_data[k][28]
+        alpha_top10 = target_data[k][29]
     
-        writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,bazaar,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
+        writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
 
 #Open csv file from within code
 os.system('open outdata/ico_data_reduced.csv')
@@ -402,17 +413,17 @@ os.system('cp outdata/ico_google_new.csv outdata2/')
 
 #Next step is to remove N/A crypto coin performance entries from the reduced file
 
-columnTitles_renew = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
+columnTitles_renew = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
 with open('outdata/ico_data_reduced2.csv', 'w') as csvfile_renew:
     csvfile_renew.write(columnTitles_renew)
     writer=csv.writer(csvfile_renew, delimiter=',')
 
     for i in range(1,len(target_data)):
-        if (target_data[i][18] == 'N/A') or (target_data[i][18] == 'nan') or (target_data[i][18] == 'inf') :
-            (target_data[i][18],target_data[i][19],target_data[i][20],target_data[i][21],target_data[i][22],target_data[i][23],target_data[i][24],target_data[i][25],target_data[i][26],target_data[i][27]) = (-1.0,0.0,-100.,-100.,-100.,-100,-100.,-100.,-100.,-100.)
+        if (target_data[i][20] == 'N/A') or (target_data[i][20] == 'nan') or (target_data[i][20] == 'inf') :
+            (target_data[i][20],target_data[i][21],target_data[i][22],target_data[i][23],target_data[i][24],target_data[i][25],target_data[i][26],target_data[i][27],target_data[i][28],target_data[i][29]) = (-1.0,0.0,-100.,-100.,-100.,-100,-100.,-100.,-100.,-100.)
 
-        writer.writerow([target_data[i][0],target_data[i][1],target_data[i][2],target_data[i][3],target_data[i][4],target_data[i][5],target_data[i][6],target_data[i][7],target_data[i][8],target_data[i][9],target_data[i][10],target_data[i][11],target_data[i][12],target_data[i][13],target_data[i][14],target_data[i][15],target_data[i][16],target_data[i][17],target_data[i][18],target_data[i][19],target_data[i][20],target_data[i][21],target_data[i][22],target_data[i][23],target_data[i][24],target_data[i][25],target_data[i][26],target_data[i][27]])
+        writer.writerow([target_data[i][0],target_data[i][1],target_data[i][2],target_data[i][3],target_data[i][4],target_data[i][5],target_data[i][6],target_data[i][7],target_data[i][8],target_data[i][9],target_data[i][10],target_data[i][11],target_data[i][12],target_data[i][13],target_data[i][14],target_data[i][15],target_data[i][16],target_data[i][17],target_data[i][18],target_data[i][19],target_data[i][20],target_data[i][21],target_data[i][22],target_data[i][23],target_data[i][24],target_data[i][25],target_data[i][26],target_data[i][27],target_data[i][28],target_data[i][29]])
         continue
 
 os.system('mv outdata/ico_data_reduced2.csv outdata/ico_data_reduced.csv')        
@@ -420,7 +431,7 @@ os.system('mv outdata/ico_data_reduced2.csv outdata/ico_data_reduced.csv')
 #Final step is to produce the "complete" reduced database with no N/A entries at all.
 
 
-columnTitles_complete = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
+columnTitles_complete = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
 with open('outdata/ico_data_complete.csv', 'w') as csvfile_b:
     csvfile_b.write(columnTitles_complete)
@@ -428,7 +439,7 @@ with open('outdata/ico_data_complete.csv', 'w') as csvfile_b:
 
     for i in range(0,len(target_data)):
         if 'N/A' not in target_data[i]:
-            all_data = [target_data[i][0],target_data[i][1],target_data[i][2],target_data[i][3],target_data[i][4],target_data[i][5],target_data[i][6],target_data[i][7],target_data[i][8],target_data[i][9],target_data[i][10],target_data[i][11],target_data[i][12],target_data[i][13],target_data[i][14],target_data[i][15],target_data[i][16],target_data[i][17],target_data[i][18],target_data[i][19],target_data[i][20],target_data[i][21],target_data[i][22],target_data[i][23],target_data[i][24],target_data[i][25],target_data[i][26],target_data[i][27]]
+            all_data = [target_data[i][0],target_data[i][1],target_data[i][2],target_data[i][3],target_data[i][4],target_data[i][5],target_data[i][6],target_data[i][7],target_data[i][8],target_data[i][9],target_data[i][10],target_data[i][11],target_data[i][12],target_data[i][13],target_data[i][14],target_data[i][15],target_data[i][16],target_data[i][17],target_data[i][18],target_data[i][19],target_data[i][20],target_data[i][21],target_data[i][22],target_data[i][23],target_data[i][24],target_data[i][25],target_data[i][26],target_data[i][27],target_data[i][28],target_data[i][29]]
             writer.writerow(all_data)
 
 os.system('cp outdata/* outdata2/') 

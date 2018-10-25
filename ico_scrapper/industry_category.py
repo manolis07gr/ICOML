@@ -1,18 +1,18 @@
 def func_industry(industry):
 
 	fintech = ['business services','businessservices','consulting','fintech','banking','finance','trade','trading','exchange','crowdfunding','business','investment','financial services','bank services','financialservices','bankservices','payments','banking&payments','exchanges&wallets','wallets','exchanges']
-	blockchain = ['blockchain','mining','cryptocurrency','smart contract','smartcontract','blockchain service','decentralized','blockchain infrastructure','dapp','blockchaininfrastructure']
+	blockchain = ['blockchain','currency','cryptocurrency','mining','cryptocurrency','smart contract','smartcontract','blockchain service','decentralized','blockchain infrastructure','dapp','blockchaininfrastructure']
 	real_estate = ['real estate','housing','lodging','hotels','realestate']
 	social_service = ['social service','community service','charity','education','socialservice']
 	entertainment = ['entertainment','music','film','events','video','sports']
 	gaming = ['gaming','vr','gaming&vr','video games','virtual reality','gaming & vr','videogames']
 	gambling = ['gambling','casino','casino & gambling','casino&gambling','betting']
 	ecommerce = ['ecommerce','commerce','retail','commerce&retail']
-	saas = ['saas','computing','data storage','datastorage','computing & data storage','software as a service','softwareasaservice','software','data services','cloud services','dataservices','cloudservices','cloud','cloud storage','cloudstorage','data','big data','internet','platform','protocol','marketing','advertising','identity','verification','security','app','it']
+	saas = ['saas','computing','data storage','datastorage','computing & data storage','software as a service','softwareasaservice','software','data services','cloud services','dataservices','cloudservices','cloud','cloud storage','cloudstorage','data','big data','internet','platform','protocol','marketing','advertising','business services','consulting','identity','verification','security','app','it','marketing & advertising']
 	transportation = ['transport','infrastructure','travel','tourism','vacations','supply&logistics','supply','logistics']
 	law = ['legal','law','legal services','legalservices']
 	insurances = ['insurance','health','healthcare']
-	telecom = ['telecommunications','communication','media','social media','social network','socialnetwork']
+	telecom = ['telecommunications','communication','media','social media','social network','socialnetwork','internet','internet&telecommunications','internet & telecommunications']
 	energy = ['energy','energy&utilities']
 	
 	if industry in fintech:

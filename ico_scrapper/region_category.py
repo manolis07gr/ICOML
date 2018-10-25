@@ -1,12 +1,12 @@
 def func_region(region):
 
-	region1 = ['usa','united states','u.s.','united states of america','canada']
+	region1 = ['usa','USA','united states','u.s.','united states of america','canada']
 	region2 = ['russia','ukraine','belarus']
-	region3 = ['china','hong kong']
-	region4 = ['uk','u.k.','united kingdom','england','great britain']
+	region3 = ['china','hong kong','taiwan']
+	region4 = ['uk','u.k.','united kingdom','england','great britain','scotland']
 	region5 = ['albania','andorra','austria','belgium','bosnia','bulgaria','croatia','czech republic','denmark','estonia','finland','france','germany','greece','hungary','iceland','ireland','italy','latvia','liechtenstein','lithuania','luxembourg','malta','moldova','monaco','netherlands','norway','poland','portugal','romania','serbia','slovakia','slovenia','spain','sweden']
 	region6 = ['switzerland']
-	region7 = ['singapore','cayman islands','gibraltar','isle of man','isleofman','virgin islands','british virgin islands','britishvirginislands','virginislands']
+	region7 = ['singapore','cayman islands','gibraltar','isle of man','isleofman','virgin islands','british virgin islands','britishvirginislands','virginislands','philippines']
 	region8 = ['japan','south korea','s. korea']
 	region9 = ['australia','new zealand','solomon islands']
 	region10 = ['brazil','brasil','argentina','peru','equador','costa rica','panama','nicaragua','belize','mexico','guatemala','equador','chile','venezuela','uruguay','paraguay','honduras','bolivia','colombia']

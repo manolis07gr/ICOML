@@ -551,12 +551,12 @@ def ico_data_collector(input_vector,bitcoin,top10s):
 
     ret_icoday1 = ret_icoday1
 
-    columnTitles2 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
+    columnTitles2 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
     with open('outdata/ico_data_reduced_single.csv', 'w') as csvfile2:
         csvfile2.write(columnTitles2)
         writer=csv.writer(csvfile2, delimiter=',')
-        writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
+        writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
 
     #--------------------------------------------------------------------------------
     #--------------------------------------------------------------------------------
@@ -568,14 +568,14 @@ def ico_data_collector(input_vector,bitcoin,top10s):
     risk = risk4
     bazaar = bazaar_rating6
 
-    columnTitles3 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
+    columnTitles3 = "coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10\n"
 
     with open('outdata/ico_data_reduced_wratings_single.csv', 'w') as csvfile3:
         csvfile3.write(columnTitles3)
         writer=csv.writer(csvfile3, delimiter=',')
-        writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,bazaar,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
+        writer.writerow([currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10])
 
     #--------------------------------------------------------------------------------
     #--------------------------------------------------------------------------------
     #--------------------------------------------------------------------------------
-    return [currency,start1,end1,duration1,age1,start3,end3,duration3,age3,start4,end4,duration4,age4,start5,end5,duration5,age5,country1,country2,country3,country5,industry1,industry2,industry4,team1,team2,team3,team4,team5,team6,raised1,raised2,raised4,raised5,hardcap1,hardcap2,hardcap4,hardcap5,hardcap6,success1,success2,success4,price1,price2,price4,price5,price6,telegram1,telegram2,telegram4,N_google_news,N_twitter,hype4,risk4,bazaar_rating6,ret_day1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10],[currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,hype,risk,bazaar,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10]
+    return [currency,start1,end1,duration1,age1,start3,end3,duration3,age3,start4,end4,duration4,age4,start5,end5,duration5,age5,country1,country2,country3,country5,industry1,industry2,industry4,team1,team2,team3,team4,team5,team6,raised1,raised2,raised4,raised5,hardcap1,hardcap2,hardcap4,hardcap5,hardcap6,success1,success2,success4,price1,price2,price4,price5,price6,telegram1,telegram2,telegram4,N_google_news,N_twitter,N_daily_views,N_daily_time,hype4,risk4,bazaar_rating6,ret_day1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10],[currency,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar,ret_icoday1,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10]
