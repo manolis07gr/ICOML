@@ -1,0 +1,3 @@
+coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10
+waves,12 Apr 2016,31 May 2016,49.0,906.0,6,blockchain,27,16000000.0,16000000.0,1.0,0.188,N/A,0,130364,2.6,192.0,N/A,N/A,N/A,5.43617,83734,-0.286,-0.152,-2.405,-2.431,0.001,-0.574,0.003,-0.001
+newbium,1 May 2016,31 May 2016,30.0,906.0,12,other,N/A,38180.0,636333.0,0.06,0.0,N/A,0,3169,1.7,186.0,N/A,N/A,0.28,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0

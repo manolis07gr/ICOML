@@ -1,0 +1,5 @@
+keep_social.py: produces social stats dataset / RUN BEFORE main program
+plot_icos.py: main program
+loads ico_data_rate_cluster and ico_data_complete.csv files and
+ico_data_social.csv to perform clustering, rating and linear regression.
+Update datasets from ICO_Scrapper_NEW_TESTING

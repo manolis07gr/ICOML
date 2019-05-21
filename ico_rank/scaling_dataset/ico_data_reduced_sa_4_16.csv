@@ -1,0 +1,7 @@
+coin,start,end,duration,age,region,industry,team,raised,hardcap,success,price,telegram,N_google_news,N_twitter,N_daily_views,N_daily_time,hype,risk,bazaar-rate,ret_ico_to_day_one,vol_day1,sharpe_1,sharpe_3,sharpe_yr,sharpe_yr2,beta_btc,beta_top10,alpha_btc,alpha_top10
+plutus,30 Jun 2016,8 Jul 2016,8.0,868.0,5,ecommerce,12,1000000.0,N/A,N/A,0.0,N/A,1,N/A,2.0,100.0,Low,N/A,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+blockpay,23 Aug 2016,15 Sep 2016,23.0,799.0,6,other,1,53836010.0,N/A,N/A,0.124,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,0.70484,483,-0.158,-0.007,-0.108,-0.131,0.371,4.273,0.028,0.038
+incent,1 Sep 2016,1 Sep 2016,0.0,814.0,9,other,8,1000000.0,N/A,N/A,0.095,N/A,1,12700,3.5,275.0,N/A,N/A,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+firstblood,25 Sep 2016,26 Sep 2016,1.0,789.0,1,gaming,13,5500000.0,N/A,N/A,0.0758,N/A,2,28856,3.3,198.0,High,N/A,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+iconomi,25 Aug 2016,29 Sep 2016,35.0,786.0,5,fintech,26,10000000.0,11764706.0,0.85,0.105,N/A,1,49262,2.2,198.0,VeryHigh,N/A,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0
+verge,15 Jun 2016,15 Jul 2016,30.0,862.0,12,blockchain,N/A,N/A,N/A,N/A,N/A,26853,2,N/A,N/A,N/A,VeryHigh,N/A,N/A,-1.0,0.0,-100.0,-100.0,-100.0,-100,-100.0,-100.0,-100.0,-100.0

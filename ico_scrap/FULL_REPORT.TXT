@@ -1,0 +1,223 @@
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING HYPE
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.11
+Bloxverse/Semiannual Score Kendall Tau:  -0.026
+Bloxverse/Quarterly Score Kendall Tau:  0.204
+ICO Rating Hype Score Kendall Tau:  0.14
+Bloxverse/Full Linear Fit Error:  52.601
+Bloxverse/Semiannual Linear Fit Error:  54.051
+Bloxverse/Quarterly Linear Fit Error:  49.612
+ICO Rating Hype Linear Fit Error:  52.201
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING RISK
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.047
+Bloxverse/Semiannual Score Kendall Tau:  -0.083
+Bloxverse/Quarterly Score Kendall Tau:  0.2
+ICO Rating Risk Score Kendall Tau:  -0.168
+Bloxverse/Full Linear Fit Error:  32.806
+Bloxverse/Semiannual Linear Fit Error:  32.753
+Bloxverse/Quarterly Linear Fit Error:  30.465
+ICO Rating Risk Linear Fit Error:  32.839
+----------------------------------------------------------------
+BLOXVERSE VS. ICO BAZAAR RATING
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.048
+Bloxverse/Semiannual Score Kendall Tau:  -0.131
+Bloxverse/Quarterly Score Kendall Tau:  0.314
+ICO Bazaar Score Kendall Tau:  0.116
+Bloxverse/Full Linear Fit Error:  13.945
+Bloxverse/Semiannual Linear Fit Error:  13.791
+Bloxverse/Quarterly Linear Fit Error:  11.267
+ICO Bazaar Linear Fit Error:  13.976
+----------------------------------------------------------------
+BLOXVERSE VS. ICO MARKS RATING
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.08
+Bloxverse/Semiannual Score Kendall Tau:  -0.02
+Bloxverse/Quarterly Score Kendall Tau:  0.087
+ICO Marks Score Kendall Tau:  0.037
+Bloxverse/Full Linear Fit Error:  29.67
+Bloxverse/Semiannual Linear Fit Error:  29.969
+Bloxverse/Quarterly Linear Fit Error:  29.293
+ICO Marks Linear Fit Error:  29.939
+----------------------------------------------------------------
+BLOXVERSE VS. ICO BENCH RATING
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.186
+Bloxverse/Semiannual Score Kendall Tau:  0.054
+Bloxverse/Quarterly Score Kendall Tau:  0.298
+ICO Bench Score Kendall Tau:  0.089
+Bloxverse/Full Linear Fit Error:  20.631
+Bloxverse/Semiannual Linear Fit Error:  21.915
+Bloxverse/Quarterly Linear Fit Error:  18.545
+ICO Bench Linear Fit Error:  21.943
+----------------------------------------------------------------
+DISTRIBUTION OF TRUE SUCCESS VERSUS RATING PREDICTIONS
+----------------------------------------------------------------
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING HYPE: DAY 1 RETURNS
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.187
+Bloxverse/Semiannual Score Kendall Tau:  0.048
+Bloxverse/Quarterly Score Kendall Tau:  0.332
+ICO Rating Hype Score Kendall Tau:  0.118
+Bloxverse/Full Linear Fit Error:  197.548
+Bloxverse/Semiannual Linear Fit Error:  200.188
+Bloxverse/Quarterly Linear Fit Error:  186.72
+ICO Rating Hype Linear Fit Error:  196.286
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING RISK: DAY 1 RETURNS
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.222
+Bloxverse/Semiannual Score Kendall Tau:  0.081
+Bloxverse/Quarterly Score Kendall Tau:  0.35
+ICO Rating Risk Score Kendall Tau:  -0.19
+Bloxverse/Full Linear Fit Error:  177.717
+Bloxverse/Semiannual Linear Fit Error:  180.696
+Bloxverse/Quarterly Linear Fit Error:  166.603
+ICO Rating Risk Linear Fit Error:  180.813
+----------------------------------------------------------------
+BLOXVERSE VS. ICOBAZAAR: DAY 1 RETURNS
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.195
+Bloxverse/Semiannual Score Kendall Tau:  0.031
+Bloxverse/Quarterly Score Kendall Tau:  0.324
+ICO Rating Risk Score Kendall Tau:  0.166
+Bloxverse/Full Linear Fit Error:  32.69
+Bloxverse/Semiannual Linear Fit Error:  33.933
+Bloxverse/Quarterly Linear Fit Error:  30.59
+ICO Rating Risk Linear Fit Error:  32.084
+----------------------------------------------------------------
+BLOXVERSE VS. ICOMARKS: DAY 1 RETURNS
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.057
+Bloxverse/Semiannual Score Kendall Tau:  0.028
+Bloxverse/Quarterly Score Kendall Tau:  0.176
+ICO Rating Risk Score Kendall Tau:  -0.042
+Bloxverse/Full Linear Fit Error:  6.004
+Bloxverse/Semiannual Linear Fit Error:  6.001
+Bloxverse/Quarterly Linear Fit Error:  5.889
+ICO Rating Risk Linear Fit Error:  5.934
+----------------------------------------------------------------
+BLOXVERSE VS. ICOBENCH: DAY 1 RETURNS
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.121
+Bloxverse/Semiannual Score Kendall Tau:  0.064
+Bloxverse/Quarterly Score Kendall Tau:  0.312
+ICO Rating Risk Score Kendall Tau:  0.123
+Bloxverse/Full Linear Fit Error:  50.018
+Bloxverse/Semiannual Linear Fit Error:  50.074
+Bloxverse/Quarterly Linear Fit Error:  47.234
+ICO Rating Risk Linear Fit Error:  49.65
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING HYPE: DAY 1 VOLUME
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.169
+Bloxverse/Semiannual Score Kendall Tau:  0.05
+Bloxverse/Quarterly Score Kendall Tau:  0.322
+ICO Rating Hype Score Kendall Tau:  0.126
+Bloxverse/Full Linear Fit Error:  1.335480026290775e+16
+Bloxverse/Semiannual Linear Fit Error:  1.3356468906347756e+16
+Bloxverse/Quarterly Linear Fit Error:  1.3184564184082412e+16
+ICO Rating Hype Linear Fit Error:  1.3169358741484568e+16
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING RISK: DAY 1 VOLUME
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.204
+Bloxverse/Semiannual Score Kendall Tau:  0.085
+Bloxverse/Quarterly Score Kendall Tau:  0.328
+ICO Rating Risk Score Kendall Tau:  -0.204
+Bloxverse/Full Linear Fit Error:  1.1813933728990478e+16
+Bloxverse/Semiannual Linear Fit Error:  1.1823686125980448e+16
+Bloxverse/Quarterly Linear Fit Error:  1.1581855854012986e+16
+ICO Rating Risk Linear Fit Error:  1.1835268359820908e+16
+----------------------------------------------------------------
+BLOXVERSE VS. ICOBAZAAR: DAY 1 VOLUME
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.183
+Bloxverse/Semiannual Score Kendall Tau:  0.016
+Bloxverse/Quarterly Score Kendall Tau:  0.339
+ICO Rating Risk Score Kendall Tau:  0.119
+Bloxverse/Full Linear Fit Error:  76253233805052.86
+Bloxverse/Semiannual Linear Fit Error:  75859376109932.53
+Bloxverse/Quarterly Linear Fit Error:  74515477078295.92
+ICO Rating Risk Linear Fit Error:  75747312938786.16
+----------------------------------------------------------------
+BLOXVERSE VS. ICOMARKS: DAY 1 VOLUME
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.055
+Bloxverse/Semiannual Score Kendall Tau:  0.027
+Bloxverse/Quarterly Score Kendall Tau:  0.175
+ICO Rating Risk Score Kendall Tau:  -0.043
+Bloxverse/Full Linear Fit Error:  1125312292914100.5
+Bloxverse/Semiannual Linear Fit Error:  1128050466674135.8
+Bloxverse/Quarterly Linear Fit Error:  1130117649068094.8
+ICO Rating Risk Linear Fit Error:  1118906405022035.0
+----------------------------------------------------------------
+BLOXVERSE VS. ICOBENCH: DAY 1 VOLUME
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.115
+Bloxverse/Semiannual Score Kendall Tau:  0.061
+Bloxverse/Quarterly Score Kendall Tau:  0.312
+ICO Rating Risk Score Kendall Tau:  0.129
+Bloxverse/Full Linear Fit Error:  1.047813922150527e+16
+Bloxverse/Semiannual Linear Fit Error:  1.0452925255057348e+16
+Bloxverse/Quarterly Linear Fit Error:  1.0363003299162028e+16
+ICO Rating Risk Linear Fit Error:  1.038966063073435e+16
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING HYPE: ANNUALIZED SHARPE RATIO
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.165
+Bloxverse/Semiannual Score Kendall Tau:  0.036
+Bloxverse/Quarterly Score Kendall Tau:  0.323
+ICO Rating Hype Score Kendall Tau:  0.086
+Bloxverse/Full Linear Fit Error:  673825.145
+Bloxverse/Semiannual Linear Fit Error:  704038.994
+Bloxverse/Quarterly Linear Fit Error:  581863.172
+ICO Rating Hype Linear Fit Error:  696963.009
+----------------------------------------------------------------
+BLOXVERSE VS. ICORATING RISK: ANNUALIZED SHARPE RATIO
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.209
+Bloxverse/Semiannual Score Kendall Tau:  0.07
+Bloxverse/Quarterly Score Kendall Tau:  0.326
+ICO Rating Risk Score Kendall Tau:  -0.183
+Bloxverse/Full Linear Fit Error:  454068.321
+Bloxverse/Semiannual Linear Fit Error:  480592.035
+Bloxverse/Quarterly Linear Fit Error:  394649.406
+ICO Rating Risk Linear Fit Error:  485340.606
+----------------------------------------------------------------
+BLOXVERSE VS. ICOBAZAAR: ANNUALIZED SHARPE RATIO
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.15
+Bloxverse/Semiannual Score Kendall Tau:  0.035
+Bloxverse/Quarterly Score Kendall Tau:  0.344
+ICO Rating Risk Score Kendall Tau:  0.092
+Bloxverse/Full Linear Fit Error:  226384.629
+Bloxverse/Semiannual Linear Fit Error:  238965.06
+Bloxverse/Quarterly Linear Fit Error:  196062.26
+ICO Rating Risk Linear Fit Error:  233016.732
+----------------------------------------------------------------
+BLOXVERSE VS. ICOMARKS: ANNUALIZED SHARPE RATIO
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.055
+Bloxverse/Semiannual Score Kendall Tau:  0.026
+Bloxverse/Quarterly Score Kendall Tau:  0.174
+ICO Rating Risk Score Kendall Tau:  -0.039
+Bloxverse/Full Linear Fit Error:  86095.891
+Bloxverse/Semiannual Linear Fit Error:  86335.567
+Bloxverse/Quarterly Linear Fit Error:  81871.968
+ICO Rating Risk Linear Fit Error:  86346.485
+----------------------------------------------------------------
+BLOXVERSE VS. ICOBENCH: ANNUALIZED SHARPE RATIO
+----------------------------------------------------------------
+Bloxverse/Full Score Kendall Tau:  0.09
+Bloxverse/Semiannual Score Kendall Tau:  0.042
+Bloxverse/Quarterly Score Kendall Tau:  0.32
+ICO Rating Risk Score Kendall Tau:  0.131
+Bloxverse/Full Linear Fit Error:  274928.804
+Bloxverse/Semiannual Linear Fit Error:  277801.948
+Bloxverse/Quarterly Linear Fit Error:  234264.843
+ICO Rating Risk Linear Fit Error:  273650.333
